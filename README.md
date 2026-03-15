@@ -1,55 +1,57 @@
-# GitHub Copilot CLI 安装引导工具
+# GitHub Copilot CLI Installation Guide
 
-一个面向零基础用户的交互式网页向导，引导用户从零开始安装并使用 GitHub Copilot CLI。
+An interactive web wizard that helps complete beginners install and start using GitHub Copilot CLI from scratch.
 
-## 在线使用
+## Live Demo
 
-访问 GitHub Pages 部署地址即可开始使用（无需安装任何软件）。
+👉 **[legendyz.github.io/InstallCLI](https://legendyz.github.io/InstallCLI/)**
 
-## 功能特性
+No installation needed — just open the link in your browser.
 
-- 📋 **步骤式向导** — 从打开终端到首次对话，全程引导
-- 🌐 **多语言** — 支持中文和英文界面
-- 💻 **多平台** — 自动适配 Windows / macOS / Linux 的安装命令
-- 🏢 **账号分流** — 区分个人账号与企业 EMU 账号的不同路径
-- ❓ **Q&A 系统** — 每步附带常见问题解答，提供友好的技术背景说明
-- 🚀 **首次启动引导** — 安装完成后解释 CLI 首次启动的每个步骤
-- 📱 **响应式设计** — 手机、平板、电脑均可使用
+## Features
 
-## 本地预览
+- 📋 **Step-by-step wizard** — Guides users from opening a terminal to their first AI conversation
+- 🌐 **Bilingual** — Full Chinese and English interface
+- 💻 **Multi-platform** — Auto-adapts commands for Windows / macOS / Linux
+- 🏢 **Account branching** — Separate paths for personal GitHub accounts and enterprise EMU accounts (with Microsoft FTE/vendor guidance)
+- ❓ **Contextual Q&A** — Each step includes FAQs with beginner-friendly technical explanations
+- 🎮 **Hands-on tutorial** — Optional mini game project to experience AI-powered coding
+- 📱 **Responsive design** — Works on desktop, tablet, and mobile
 
-用任意静态文件服务器打开即可，例如：
+## Local Preview
+
+Serve the project with any static file server:
 
 ```bash
 # Python
 python -m http.server 8000
 
-# Node.js (npx)
+# Node.js
 npx serve .
 ```
 
-然后浏览器打开 `http://localhost:8000`。
+Then open `http://localhost:8000` in your browser.
 
-## 项目结构
+## Project Structure
 
 ```
-├── index.html          # 单页应用主文件
+├── index.html          # Single-page application
 ├── css/
-│   └── style.css       # 响应式样式
+│   └── style.css       # Microsoft Fluent Design styling
 ├── js/
-│   ├── app.js          # 向导引擎、状态管理
-│   ├── i18n.js         # 多语言框架
-│   ├── steps.js        # 安装步骤定义
-│   └── faq.js          # Q&A 知识库
+│   ├── app.js          # Wizard engine & state management
+│   ├── i18n.js         # i18n framework
+│   ├── steps.js        # Installation step definitions
+│   └── faq.js          # Q&A knowledge base
 └── README.md
 ```
 
-## 部署到 GitHub Pages
+## Deploy to GitHub Pages
 
-1. 将仓库推送到 GitHub
-2. Settings → Pages → Source 选择 `main` 分支、`/ (root)` 目录
-3. 保存后等待部署完成
+1. Push the repository to GitHub
+2. Go to Settings → Pages → Source, select the `master` branch and `/ (root)` directory
+3. Save and wait for the deployment to complete
 
-## 贡献
+## Contributing
 
-欢迎提交 Issue 和 Pull Request。
+Issues and Pull Requests are welcome.
