@@ -522,6 +522,7 @@ Contact your IT admin and let them know:<br>
   <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/usage</td><td style="padding:8px 12px;border:1px solid var(--c-border);">查看当前会话的使用统计（请求次数、token 消耗等）</td></tr>
   <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/context</td><td style="padding:8px 12px;border:1px solid var(--c-border);">查看 Copilot 当前能"看到"哪些文件和信息</td></tr>
   <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/sessions</td><td style="padding:8px 12px;border:1px solid var(--c-border);">查看会话信息（开始时间、修改的文件等）</td></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/resume</td><td style="padding:8px 12px;border:1px solid var(--c-border);">恢复之前的对话继续工作——中断后不用从头开始</td></tr>
   <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/login</td><td style="padding:8px 12px;border:1px solid var(--c-border);">登录 GitHub 账号</td></tr>
   <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/logout</td><td style="padding:8px 12px;border:1px solid var(--c-border);">退出当前账号（切换账号时使用）</td></tr>
   <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/exit</td><td style="padding:8px 12px;border:1px solid var(--c-border);">退出 Copilot CLI，回到普通终端</td></tr>
@@ -551,6 +552,7 @@ Contact your IT admin and let them know:<br>
   <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/usage</td><td style="padding:8px 12px;border:1px solid var(--c-border);">View session stats (request count, token usage, etc.)</td></tr>
   <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/context</td><td style="padding:8px 12px;border:1px solid var(--c-border);">See what files and information Copilot can currently "see"</td></tr>
   <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/sessions</td><td style="padding:8px 12px;border:1px solid var(--c-border);">View session info (start time, modified files, etc.)</td></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/resume</td><td style="padding:8px 12px;border:1px solid var(--c-border);">Resume a previous conversation — pick up where you left off</td></tr>
   <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/login</td><td style="padding:8px 12px;border:1px solid var(--c-border);">Log into your GitHub account</td></tr>
   <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/logout</td><td style="padding:8px 12px;border:1px solid var(--c-border);">Log out of current account (use when switching accounts)</td></tr>
   <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/exit</td><td style="padding:8px 12px;border:1px solid var(--c-border);">Exit Copilot CLI and return to your regular terminal</td></tr>

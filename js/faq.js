@@ -176,8 +176,8 @@ const FAQS = {
     {
       q: { zh: '对话历史会保留多久？', en: 'How long does conversation history last?' },
       a: {
-        zh: '对话历史只在当前会话中保留。关闭 Copilot CLI 后，对话记录就清除了。下次启动时是全新的对话。<br><br>如果对话变长导致回答质量下降，可以用 <code>/clear</code> 清空历史重新开始。',
-        en: 'Conversation history only lasts for the current session. Once you close Copilot CLI, it\'s cleared. Each launch starts a fresh conversation.<br><br>If a long conversation causes response quality to drop, use <code>/clear</code> to start fresh.',
+        zh: '对话历史只在当前会话中保留。关闭 Copilot CLI 后，对话记录就清除了。下次启动时是全新的对话。<br><br>不过，Copilot 会自动保存你的会话记录。你可以用 <code>/sessions</code> 查看过去的对话列表，然后用 <code>/resume</code> 恢复之前的对话继续工作。这对于需要中断后继续的长任务非常有用。<br><br>如果对话变长导致回答质量下降，可以用 <code>/clear</code> 清空历史重新开始。',
+        en: 'Conversation history only lasts for the current session. Once you close Copilot CLI, it\'s cleared. Each launch starts a fresh conversation.<br><br>However, Copilot automatically saves your session records. You can use <code>/sessions</code> to view past conversations, then use <code>/resume</code> to pick up where you left off. This is very useful for long tasks that need to be interrupted and continued later.<br><br>If a long conversation causes response quality to drop, use <code>/clear</code> to start fresh.',
       },
     },
   ],
