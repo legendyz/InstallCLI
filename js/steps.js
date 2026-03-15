@@ -489,18 +489,20 @@ Contact your IT admin and let them know:<br>
         },
       },
       {
-        title: { zh: '初始化项目指令文件（copilot init）', en: 'Initialize Project Instructions (copilot init)' },
+        title: { zh: '⭐ 初始化项目指令文件（copilot init）— 强烈推荐', en: '⭐ Initialize Project Instructions (copilot init) — Strongly Recommended' },
         body: {
-          zh: `<p>当你在一个代码项目中工作时，可以先退出对话模式，然后运行：</p>
+          zh: `<div class="info-box warning"><span class="info-box-icon">⭐</span><span class="info-box-text"><strong>这一步是可选的，但强烈推荐。</strong>不做这一步 Copilot 也能正常使用，但做了之后 Copilot 的回答质量会明显提升——尤其在大型或复杂项目中，差距非常大。</span></div>
+<p>当你在一个代码项目中工作时，可以先退出对话模式，然后运行：</p>
 <div class="command-block"><code>/exit</code><button class="btn-copy" data-cmd="/exit"></button></div>
 <div class="command-block"><code>copilot init</code><button class="btn-copy" data-cmd="copilot init"></button></div>
 <p>这个命令会分析你的项目代码，自动生成一个 <code>.github/copilot-instructions.md</code> 文件。这个文件告诉 Copilot 你的项目用了哪些技术、遵循什么编码风格、如何构建和测试等信息。</p>
-<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>有什么用？</strong>有了这个指令文件，Copilot 以后在这个项目里给你的建议会更准确、更符合你项目的习惯。就像给 AI 一份"项目说明书"。<br><br>如果你现在还没有自己的代码项目，可以先跳过这一步，以后需要时再回来。</span></div>`,
-          en: `<p>When working inside a code project, you can exit the conversation first, then run:</p>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>打个比方：</strong>不用 <code>copilot init</code> 就像让一个新同事帮你干活，但不告诉他公司的规范和项目背景；用了之后就像给他一份详细的"项目说明书"，他干出来的活自然更靠谱。<br><br>如果你现在还没有自己的代码项目，可以先跳过这一步，以后开始项目时记得回来用一下。</span></div>`,
+          en: `<div class="info-box warning"><span class="info-box-icon">⭐</span><span class="info-box-text"><strong>This step is optional but strongly recommended.</strong> Copilot works fine without it, but with it the quality of Copilot's responses improves noticeably — especially in large or complex projects, the difference is significant.</span></div>
+<p>When working inside a code project, you can exit the conversation first, then run:</p>
 <div class="command-block"><code>/exit</code><button class="btn-copy" data-cmd="/exit"></button></div>
 <div class="command-block"><code>copilot init</code><button class="btn-copy" data-cmd="copilot init"></button></div>
 <p>This command analyzes your project's code and automatically generates a <code>.github/copilot-instructions.md</code> file. This file tells Copilot about your project's tech stack, coding style, build and test commands, and more.</p>
-<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>Why is this useful?</strong> With this instructions file, Copilot's suggestions will be more accurate and consistent with your project's conventions. Think of it as giving AI a "project handbook".<br><br>If you don't have your own code project yet, feel free to skip this step and come back later.</span></div>`,
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>Think of it this way:</strong> Without <code>copilot init</code>, it's like asking a new colleague to help you but not telling them about the project's conventions and context. With it, you're giving them a detailed "project handbook" — naturally, their work will be much better.<br><br>If you don't have your own code project yet, feel free to skip this step and come back when you start one.</span></div>`,
         },
         why: {
           zh: 'copilot init 让 AI 了解你的项目上下文。没有它，Copilot 也能工作，但有了它，回答会更精准、更贴合你的项目实际情况。',
