@@ -430,6 +430,37 @@ Contact your IT admin and let them know:<br>
         },
       },
       {
+        title: { zh: '了解 Copilot CLI 的目录结构', en: 'Copilot CLI Directory Structure' },
+        body: {
+          zh: `<p>首次启动后，Copilot CLI 会在你的用户目录下自动创建一个 <code>~/.copilot/</code> 文件夹（Windows 上是 <code>%USERPROFILE%\\.copilot\\</code>）。这个文件夹存放了 Copilot 运行所需的所有数据：</p>
+<table style="width:100%;border-collapse:collapse;margin:12px 0;font-size:.9rem">
+<tr style="background:var(--c-primary-bg)"><th style="text-align:left;padding:8px;border:1px solid var(--c-border)">📁 目录</th><th style="text-align:left;padding:8px;border:1px solid var(--c-border)">用途</th></tr>
+<tr><td style="padding:8px;border:1px solid var(--c-border)"><code>session-state/</code></td><td style="padding:8px;border:1px solid var(--c-border)">每次对话的会话数据（计划、检查点、上下文记忆等）</td></tr>
+<tr><td style="padding:8px;border:1px solid var(--c-border)"><code>logs/</code></td><td style="padding:8px;border:1px solid var(--c-border)">运行日志，遇到问题时可以查看这里排查错误</td></tr>
+<tr><td style="padding:8px;border:1px solid var(--c-border)"><code>pkg/</code></td><td style="padding:8px;border:1px solid var(--c-border)">Copilot CLI 的程序包文件</td></tr>
+<tr><td style="padding:8px;border:1px solid var(--c-border)"><code>tmp/</code></td><td style="padding:8px;border:1px solid var(--c-border)">临时文件，可安全忽略</td></tr>
+<tr><td style="padding:8px;border:1px solid var(--c-border)"><code>win32-x64/</code> 或类似</td><td style="padding:8px;border:1px solid var(--c-border)">适配你操作系统的平台专属文件</td></tr>
+<tr><td style="padding:8px;border:1px solid var(--c-border)"><code>mcp-config.json</code></td><td style="padding:8px;border:1px solid var(--c-border)">MCP 服务器配置文件（高级功能，初学者可忽略）</td></tr>
+</table>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">你不需要手动修改这些目录。它们由 Copilot 自动管理。了解它们的存在即可——如果以后遇到问题需要排查，知道日志在 <code>logs/</code> 里会很有帮助。</span></div>`,
+          en: `<p>After the first launch, Copilot CLI automatically creates a <code>~/.copilot/</code> folder in your home directory (on Windows: <code>%USERPROFILE%\\.copilot\\</code>). This folder stores all the data Copilot needs to run:</p>
+<table style="width:100%;border-collapse:collapse;margin:12px 0;font-size:.9rem">
+<tr style="background:var(--c-primary-bg)"><th style="text-align:left;padding:8px;border:1px solid var(--c-border)">📁 Directory</th><th style="text-align:left;padding:8px;border:1px solid var(--c-border)">Purpose</th></tr>
+<tr><td style="padding:8px;border:1px solid var(--c-border)"><code>session-state/</code></td><td style="padding:8px;border:1px solid var(--c-border)">Session data for each conversation (plans, checkpoints, context memory)</td></tr>
+<tr><td style="padding:8px;border:1px solid var(--c-border)"><code>logs/</code></td><td style="padding:8px;border:1px solid var(--c-border)">Runtime logs — useful for troubleshooting when things go wrong</td></tr>
+<tr><td style="padding:8px;border:1px solid var(--c-border)"><code>pkg/</code></td><td style="padding:8px;border:1px solid var(--c-border)">Copilot CLI package files</td></tr>
+<tr><td style="padding:8px;border:1px solid var(--c-border)"><code>tmp/</code></td><td style="padding:8px;border:1px solid var(--c-border)">Temporary files, safe to ignore</td></tr>
+<tr><td style="padding:8px;border:1px solid var(--c-border)"><code>win32-x64/</code> or similar</td><td style="padding:8px;border:1px solid var(--c-border)">Platform-specific files for your operating system</td></tr>
+<tr><td style="padding:8px;border:1px solid var(--c-border)"><code>mcp-config.json</code></td><td style="padding:8px;border:1px solid var(--c-border)">MCP server configuration (advanced feature, beginners can ignore)</td></tr>
+</table>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">You don't need to modify these directories. They're managed automatically by Copilot. Just knowing they exist is enough — if you ever need to troubleshoot, the <code>logs/</code> folder is where to look.</span></div>`,
+        },
+        why: {
+          zh: '了解工具的数据存放位置是一个好习惯。当你需要清理磁盘空间、备份配置、或排查问题时，知道这些目录的作用会非常有帮助。',
+          en: 'Knowing where a tool stores its data is good practice. It helps when you need to free disk space, back up settings, or troubleshoot issues.',
+        },
+      },
+      {
         title: { zh: '进入交互界面', en: 'Enter the Interactive Interface' },
         body: {
           zh: '<p>成功启动后，你会看到一个类似聊天窗口的界面。光标停在输入行，等待你输入指令。</p>',
@@ -455,6 +486,25 @@ Contact your IT admin and let them know:<br>
         why: {
           zh: '这验证了整个链路都在正常工作：CLI 工具 → GitHub 认证 → AI 模型 → 结果返回。',
           en: 'This verifies the entire pipeline is working: CLI tool → GitHub auth → AI model → results returned.',
+        },
+      },
+      {
+        title: { zh: '初始化项目指令文件（copilot init）', en: 'Initialize Project Instructions (copilot init)' },
+        body: {
+          zh: `<p>当你在一个代码项目中工作时，可以先退出对话模式，然后运行：</p>
+<div class="command-block"><code>/exit</code><button class="btn-copy" data-cmd="/exit"></button></div>
+<div class="command-block"><code>copilot init</code><button class="btn-copy" data-cmd="copilot init"></button></div>
+<p>这个命令会分析你的项目代码，自动生成一个 <code>.github/copilot-instructions.md</code> 文件。这个文件告诉 Copilot 你的项目用了哪些技术、遵循什么编码风格、如何构建和测试等信息。</p>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>有什么用？</strong>有了这个指令文件，Copilot 以后在这个项目里给你的建议会更准确、更符合你项目的习惯。就像给 AI 一份"项目说明书"。<br><br>如果你现在还没有自己的代码项目，可以先跳过这一步，以后需要时再回来。</span></div>`,
+          en: `<p>When working inside a code project, you can exit the conversation first, then run:</p>
+<div class="command-block"><code>/exit</code><button class="btn-copy" data-cmd="/exit"></button></div>
+<div class="command-block"><code>copilot init</code><button class="btn-copy" data-cmd="copilot init"></button></div>
+<p>This command analyzes your project's code and automatically generates a <code>.github/copilot-instructions.md</code> file. This file tells Copilot about your project's tech stack, coding style, build and test commands, and more.</p>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>Why is this useful?</strong> With this instructions file, Copilot's suggestions will be more accurate and consistent with your project's conventions. Think of it as giving AI a "project handbook".<br><br>If you don't have your own code project yet, feel free to skip this step and come back later.</span></div>`,
+        },
+        why: {
+          zh: 'copilot init 让 AI 了解你的项目上下文。没有它，Copilot 也能工作，但有了它，回答会更精准、更贴合你的项目实际情况。',
+          en: 'copilot init gives the AI context about your project. Copilot works without it, but with it, responses will be more precise and aligned with your project\'s actual setup.',
         },
       },
     ],
