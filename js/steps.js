@@ -488,29 +488,6 @@ Contact your IT admin and let them know:<br>
           en: 'This verifies the entire pipeline is working: CLI tool → GitHub auth → AI model → results returned.',
         },
       },
-      {
-        title: { zh: '⭐ 初始化项目指令文件（copilot init）— 强烈推荐', en: '⭐ Initialize Project Instructions (copilot init) — Strongly Recommended' },
-        body: {
-          zh: `<div class="info-box warning"><span class="info-box-icon">⭐</span><span class="info-box-text"><strong>这一步是可选的，但强烈推荐。</strong>不做这一步 Copilot 也能正常使用，但做了之后 Copilot 的回答质量会明显提升——尤其在大型或复杂项目中，差距非常大。</span></div>
-<p><code>copilot init</code> 是一个<strong>在终端中直接运行的命令</strong>（不是在 Copilot 对话里输入的斜杠命令）。你需要先用 <code>cd</code> 命令进入你的项目目录，然后运行它：</p>
-<div class="command-block"><code>cd 你的项目路径</code></div>
-<div class="command-block"><code>copilot init</code><button class="btn-copy" data-cmd="copilot init"></button></div>
-<div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text">如果你当前正在 Copilot 对话中，需要先输入 <code>/exit</code> 退出对话，回到普通终端后再运行 <code>copilot init</code>。</span></div>
-<p>这个命令会分析你的项目代码，自动生成一个 <code>.github/copilot-instructions.md</code> 文件。这个文件告诉 Copilot 你的项目用了哪些技术、遵循什么编码风格、如何构建和测试等信息。</p>
-<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>打个比方：</strong>不用 <code>copilot init</code> 就像让一个新同事帮你干活，但不告诉他公司的规范和项目背景；用了之后就像给他一份详细的"项目说明书"，他干出来的活自然更靠谱。<br><br>如果你现在还没有自己的代码项目，可以先跳过这一步，以后开始项目时记得回来用一下。</span></div>`,
-          en: `<div class="info-box warning"><span class="info-box-icon">⭐</span><span class="info-box-text"><strong>This step is optional but strongly recommended.</strong> Copilot works fine without it, but with it the quality of Copilot's responses improves noticeably — especially in large or complex projects, the difference is significant.</span></div>
-<p><code>copilot init</code> is a command you <strong>run directly in the terminal</strong> (not a slash command inside a Copilot conversation). First <code>cd</code> into your project directory, then run it:</p>
-<div class="command-block"><code>cd your-project-path</code></div>
-<div class="command-block"><code>copilot init</code><button class="btn-copy" data-cmd="copilot init"></button></div>
-<div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text">If you're currently inside a Copilot conversation, type <code>/exit</code> first to return to the regular terminal, then run <code>copilot init</code>.</span></div>
-<p>This command analyzes your project's code and automatically generates a <code>.github/copilot-instructions.md</code> file. This file tells Copilot about your project's tech stack, coding style, build and test commands, and more.</p>
-<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>Think of it this way:</strong> Without <code>copilot init</code>, it's like asking a new colleague to help you but not telling them about the project's conventions and context. With it, you're giving them a detailed "project handbook" — naturally, their work will be much better.<br><br>If you don't have your own code project yet, feel free to skip this step and come back when you start one.</span></div>`,
-        },
-        why: {
-          zh: 'copilot init 让 AI 了解你的项目上下文。没有它，Copilot 也能工作，但有了它，回答会更精准、更贴合你的项目实际情况。',
-          en: 'copilot init gives the AI context about your project. Copilot works without it, but with it, responses will be more precise and aligned with your project\'s actual setup.',
-        },
-      },
     ],
     exitHint: {
       zh: '<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">想退出 Copilot CLI？输入 <code>/exit</code> 或按 <code>Ctrl+C</code> 即可。</span></div>',
