@@ -138,6 +138,7 @@ const STEPS = [
         zh: `<h3>推荐方式：使用 winget 安装</h3>
 <p><strong>winget</strong> 是 Windows 自带的软件包管理器，可以用一行命令安装软件。</p>
 <div class="command-block"><code>winget install GitHub.Copilot</code><button class="btn-copy" data-cmd="winget install GitHub.Copilot"></button></div>
+<div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text"><strong>可能遇到的情况：</strong>Copilot CLI 依赖 PowerShell 7，所以 winget 会先尝试安装 PowerShell 7。如果你的电脑上<strong>已经安装了 PowerShell 7</strong>，安装程序可能会弹出窗口显示 <code>installation abandoned</code>（安装已中止）。<br><br><strong>这是正常的，不用担心！</strong>这只是说明 PowerShell 7 已经存在，不需要重复安装。关闭弹窗后，<strong>重新执行一次</strong> <code>winget install GitHub.Copilot</code>，winget 就会跳过 PowerShell 7，直接安装 Copilot CLI。</span></div>
 <div class="info-box info"><span class="info-box-icon">ℹ️</span><span class="info-box-text">安装过程中可能会弹出用户权限确认，请点击"是"。如果提示 winget 不可用，请先更新"应用安装程序"——在 Microsoft Store 中搜索"应用安装程序"并更新。</span></div>
 
 <h3>备选方式：使用 npm 安装</h3>
@@ -146,6 +147,7 @@ const STEPS = [
         en: `<h3>Recommended: Install with winget</h3>
 <p><strong>winget</strong> is Windows' built-in package manager — it lets you install software with a single command.</p>
 <div class="command-block"><code>winget install GitHub.Copilot</code><button class="btn-copy" data-cmd="winget install GitHub.Copilot"></button></div>
+<div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text"><strong>You might see this:</strong> Copilot CLI depends on PowerShell 7, so winget will try to install PowerShell 7 first. If PowerShell 7 is <strong>already installed</strong> on your machine, the installer may pop up a window showing <code>installation abandoned</code>.<br><br><strong>This is normal — don't worry!</strong> It just means PowerShell 7 already exists and doesn't need to be installed again. Close the pop-up, then <strong>run the command again</strong>: <code>winget install GitHub.Copilot</code>. This time winget will skip PowerShell 7 and install Copilot CLI directly.</span></div>
 <div class="info-box info"><span class="info-box-icon">ℹ️</span><span class="info-box-text">You may see a permission prompt during installation — click "Yes". If winget is not available, update "App Installer" from the Microsoft Store.</span></div>
 
 <h3>Alternative: Install with npm</h3>
