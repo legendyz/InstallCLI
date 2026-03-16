@@ -248,7 +248,7 @@ const STEPS = [
 
 <div class="info-box info"><span class="info-box-icon">🏢</span><span class="info-box-text"><strong>微软员工（Microsoft FTE）请注意：</strong><br>请参考 <a href="https://aka.ms/copilot" target="_blank" rel="noopener">aka.ms/copilot</a> 中的引导来激活你的 EMU 账号。</span></div>
 
-<div class="info-box info"><span class="info-box-icon">🤝</span><span class="info-box-text"><strong>微软非正式员工（Non-FTE / Vendor）请注意：</strong><br>请参考 <a href="https://aka.ms/copilot/vendors" target="_blank" rel="noopener">aka.ms/copilot/vendors</a> 中的指导来获取访问权限。</span></div>
+<div class="info-box info"><span class="info-box-icon">🤝</span><span class="info-box-text"><strong>微软非正式员工（Non-FTE / Vendor）请注意：</strong><br><ol style="margin:8px 0 0 16px;"><li>请先访问 <a href="https://aka.ms/copilot/vendors" target="_blank" rel="noopener">aka.ms/copilot/vendors</a> 中的指导</li><li><strong>Request Membership</strong>（申请成员资格）— 这需要你的经理批准。请确保已连接 VPN，因为该页面会跳转到 Core Identity 系统</li><li>在获得批准之前，你<strong>无法</strong>继续后续步骤。请等待审批通过后再继续本教程</li></ol></span></div>
 
 <div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>建议同时创建个人 GitHub 账号：</strong><br>除了 EMU 账号之外，建议你也在 <a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a> 注册一个个人账号，并在 GitHub 设置中将个人账号与 EMU 账号关联。这样你可以在工作之外也使用 GitHub 的各种功能（如参与开源项目、管理个人代码等）。</span></div>
 
@@ -264,7 +264,7 @@ const STEPS = [
 
 <div class="info-box info"><span class="info-box-icon">🏢</span><span class="info-box-text"><strong>Microsoft employees (FTEs):</strong><br>Please follow the guide at <a href="https://aka.ms/copilot" target="_blank" rel="noopener">aka.ms/copilot</a> to activate your EMU account.</span></div>
 
-<div class="info-box info"><span class="info-box-icon">🤝</span><span class="info-box-text"><strong>Microsoft non-FTEs (Vendors / Contractors):</strong><br>Please follow the guide at <a href="https://aka.ms/copilot/vendors" target="_blank" rel="noopener">aka.ms/copilot/vendors</a> to get access.</span></div>
+<div class="info-box info"><span class="info-box-icon">🤝</span><span class="info-box-text"><strong>Microsoft non-FTEs (Vendors / Contractors):</strong><br><ol style="margin:8px 0 0 16px;"><li>Follow the directions at <a href="https://aka.ms/copilot/vendors" target="_blank" rel="noopener">aka.ms/copilot/vendors</a></li><li><strong>Request Membership</strong> — this will require your manager\'s approval. Ensure you have VPN enabled as this will take you to Core Identity</li><li>You will <strong>not</strong> be able to proceed with this tutorial until you have this approval</li></ol></span></div>
 
 <div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>We recommend also creating a personal GitHub account:</strong><br>In addition to your EMU account, consider signing up for a personal account at <a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a> and linking it to your EMU account in GitHub settings. This lets you use GitHub outside of work (e.g., contributing to open source, managing personal projects).</span></div>
 
@@ -304,7 +304,7 @@ const STEPS = [
         zh: `<h3>EMU 账号的 Copilot 权限</h3>
 <p>使用企业 EMU 账号时，Copilot 的访问权限由你的企业管理员统一管理，你<strong>不需要自己订阅</strong>。</p>
 <div class="info-box info"><span class="info-box-icon">🏢</span><span class="info-box-text"><strong>微软员工：</strong>请访问 <a href="https://aka.ms/copilot" target="_blank" rel="noopener">aka.ms/copilot</a> 确认你的 Copilot 权限已激活。</span></div>
-<div class="info-box info"><span class="info-box-icon">🤝</span><span class="info-box-text"><strong>微软非正式员工（Vendor）：</strong>请访问 <a href="https://aka.ms/copilot/vendors" target="_blank" rel="noopener">aka.ms/copilot/vendors</a> 获取访问指导。</span></div>
+<div class="info-box info"><span class="info-box-icon">🤝</span><span class="info-box-text"><strong>微软非正式员工（Vendor）：</strong><br><ol style="margin:8px 0 0 16px;"><li>请先访问 <a href="https://aka.ms/copilot/vendors" target="_blank" rel="noopener">aka.ms/copilot/vendors</a> 中的指导</li><li><strong>Request Membership</strong>（申请成员资格）— 需要经理批准，请确保已连接 VPN</li><li>获得批准前<strong>无法</strong>继续后续步骤</li></ol></span></div>
 <div class="info-box info"><span class="info-box-icon">📋</span><span class="info-box-text">
 <strong>其他公司的 EMU 用户，如果 Copilot 还没有开通：</strong><br>
 请联系你的 IT 管理员，告诉他们：<br>
@@ -314,7 +314,7 @@ const STEPS = [
         en: `<h3>Copilot access for EMU accounts</h3>
 <p>With an EMU account, Copilot access is managed by your enterprise admin. You <strong>don't need to subscribe individually</strong>.</p>
 <div class="info-box info"><span class="info-box-icon">🏢</span><span class="info-box-text"><strong>Microsoft employees:</strong> Visit <a href="https://aka.ms/copilot" target="_blank" rel="noopener">aka.ms/copilot</a> to verify your Copilot access is activated.</span></div>
-<div class="info-box info"><span class="info-box-icon">🤝</span><span class="info-box-text"><strong>Microsoft vendors / contractors:</strong> Visit <a href="https://aka.ms/copilot/vendors" target="_blank" rel="noopener">aka.ms/copilot/vendors</a> for access instructions.</span></div>
+<div class="info-box info"><span class="info-box-icon">🤝</span><span class="info-box-text"><strong>Microsoft vendors / contractors:</strong><br><ol style="margin:8px 0 0 16px;"><li>Follow the directions at <a href="https://aka.ms/copilot/vendors" target="_blank" rel="noopener">aka.ms/copilot/vendors</a></li><li><strong>Request Membership</strong> — requires manager approval, ensure VPN is enabled</li><li>You <strong>cannot</strong> proceed until approval is granted</li></ol></span></div>
 <div class="info-box info"><span class="info-box-icon">📋</span><span class="info-box-text">
 <strong>EMU users at other companies — if Copilot is not enabled yet:</strong><br>
 Contact your IT admin and let them know:<br>
