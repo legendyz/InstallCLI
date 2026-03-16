@@ -160,6 +160,21 @@ const App = (() => {
         html += getStepContent(step, 'content');
       }
     } else {
+      // Show account type indicator if content is account-type specific
+      const contentData = step.content;
+      if (contentData && !contentData.all && !contentData[state.os] && state.accountType && (contentData.personal || contentData.emu)) {
+        const isPersonal = state.accountType === 'personal';
+        const icon = isPersonal ? '👤' : '🏢';
+        const label = isPersonal
+          ? (I18n.getLanguage() === 'zh' ? '以下内容适用于：<strong>个人账号用户</strong>' : 'The following applies to: <strong>Personal account users</strong>')
+          : (I18n.getLanguage() === 'zh' ? '以下内容适用于：<strong>企业 EMU 账号用户</strong>' : 'The following applies to: <strong>Enterprise EMU account users</strong>');
+        const switchLabel = I18n.getLanguage() === 'zh' ? '切换账号类型' : 'Switch account type';
+        const accountStepIdx = STEPS.findIndex(s => s.hasAccountType);
+        html += `<div class="info-box info" style="margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+          <span><span class="info-box-icon">${icon}</span> ${label}</span>
+          <button class="btn btn-ghost" style="padding:4px 12px;font-size:.8rem;" data-goto-step="${accountStepIdx}">${switchLabel}</button>
+        </div>`;
+      }
       // OS-specific or all content
       html += getStepContent(step, 'content');
     }
@@ -213,6 +228,11 @@ const App = (() => {
     if (step.hasAccountType) {
       attachAccountCardHandlers();
     }
+
+    // Attach goto-step handlers (e.g. "switch account type" button)
+    $$('[data-goto-step]').forEach((btn) => {
+      btn.addEventListener('click', () => goToStep(parseInt(btn.dataset.gotoStep, 10)));
+    });
 
     // FAQ
     renderFAQ(step.id);
