@@ -175,6 +175,9 @@ const App = (() => {
       if (step.verifyCommand) {
         html += `<div class="command-block"><code>${step.verifyCommand}</code><button class="btn-copy" data-cmd="${step.verifyCommand}"></button></div>`;
       }
+      if (step.verifyHint) {
+        html += t(step.verifyHint);
+      }
     }
 
     // Substeps (first-launch step)

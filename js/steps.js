@@ -198,6 +198,10 @@ const STEPS = [
       en: '<p>After installation, run the following command to verify it worked:</p>',
     },
     verifyCommand: 'copilot --version',
+    verifyHint: {
+      zh: '<p>如果看到类似 <code>GitHub Copilot CLI 1.x.x</code> 的输出，说明安装成功 ✅</p><div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text"><strong>如果提示"找不到命令"（copilot is not recognized）：</strong>请<strong>关闭当前终端窗口</strong>，重新打开一个新的终端，再试一次。安装新软件后，终端需要重新加载才能识别新命令。</span></div>',
+      en: '<p>If you see output like <code>GitHub Copilot CLI 1.x.x</code>, the installation was successful ✅</p><div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text"><strong>If you see "copilot is not recognized":</strong> <strong>Close your current terminal window</strong>, open a new one, and try again. After installing new software, the terminal needs to reload to recognize new commands.</span></div>',
+    },
   },
 
   // ── Step 3: GitHub Account ──
