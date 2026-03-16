@@ -113,7 +113,7 @@ body {
   width: 100%; padding: 8px 12px;
   border: 1px solid var(--c-danger); border-radius: var(--radius);
   background: transparent; color: var(--c-danger);
-  cursor: pointer; font-weight: 500;
+  cursor: pointer; font-weight: 700;
   transition: background var(--transition), color var(--transition);
 }
 .btn-reset:hover { background: var(--c-danger); color: #fff; }
