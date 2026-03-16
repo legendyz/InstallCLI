@@ -362,7 +362,7 @@ Contact your IT admin and let them know:<br>
     content: {
       all: {
         zh: `<h3>启动并登录</h3>
-<p>在终端中运行：</p>
+<p>打开 <strong>PowerShell</strong>（Windows 用户）或终端（macOS/Linux 用户），运行：</p>
 <div class="command-block"><code>copilot</code><button class="btn-copy" data-cmd="copilot"></button></div>
 <p>进入 Copilot CLI 后，输入登录命令：</p>
 <div class="command-block"><code>/login</code><button class="btn-copy" data-cmd="/login"></button></div>
@@ -374,7 +374,7 @@ Contact your IT admin and let them know:<br>
 </ol>
 <div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">如果浏览器没有自动打开，手动访问 <a href="https://github.com/login/device" target="_blank" rel="noopener">github.com/login/device</a> 并输入激活码。</span></div>`,
         en: `<h3>Launch and log in</h3>
-<p>Run this in your terminal:</p>
+<p>Open <strong>PowerShell</strong> (Windows) or your terminal (macOS/Linux), and run:</p>
 <div class="command-block"><code>copilot</code><button class="btn-copy" data-cmd="copilot"></button></div>
 <p>Once Copilot CLI starts, type the login command:</p>
 <div class="command-block"><code>/login</code><button class="btn-copy" data-cmd="/login"></button></div>
@@ -404,7 +404,7 @@ Contact your IT admin and let them know:<br>
     content: {
       all: {
         zh: `<h3>检查版本</h3>
-<p>在终端中运行：</p>
+<p>在 <strong>PowerShell</strong>（Windows 用户）或终端（macOS/Linux 用户）中运行：</p>
 <div class="command-block"><code>copilot --version</code><button class="btn-copy" data-cmd="copilot --version"></button></div>
 <p>如果看到版本号（例如 <code>0.x.x</code>），说明安装成功！</p>
 
@@ -412,7 +412,7 @@ Contact your IT admin and let them know:<br>
 
 <div class="info-box danger"><span class="info-box-icon">❌</span><span class="info-box-text">如果提示"找不到命令"或出错，请尝试：<br>1. 关闭终端，重新打开一个新的终端<br>2. 再次运行 <code>copilot --version</code><br>3. 如果仍有问题，请回到第 2 步重新安装</span></div>`,
         en: `<h3>Check the version</h3>
-<p>Run this in your terminal:</p>
+<p>In <strong>PowerShell</strong> (Windows) or your terminal (macOS/Linux), run:</p>
 <div class="command-block"><code>copilot --version</code><button class="btn-copy" data-cmd="copilot --version"></button></div>
 <p>If you see a version number (e.g. <code>0.x.x</code>), the installation is successful!</p>
 
@@ -434,10 +434,10 @@ Contact your IT admin and let them know:<br>
     },
     content: {
       all: {
-        zh: `<p>在终端中运行：</p>
+        zh: `<p>打开 <strong>PowerShell</strong>（Windows 用户）或终端（macOS/Linux 用户），运行：</p>
 <div class="command-block"><code>copilot</code><button class="btn-copy" data-cmd="copilot"></button></div>
 <p>首次启动时，你可能会遇到以下几个步骤：</p>`,
-        en: `<p>Run this in your terminal:</p>
+        en: `<p>Open <strong>PowerShell</strong> (Windows) or your terminal (macOS/Linux), and run:</p>
 <div class="command-block"><code>copilot</code><button class="btn-copy" data-cmd="copilot"></button></div>
 <p>On your first launch, you may encounter the following steps:</p>`,
       },
