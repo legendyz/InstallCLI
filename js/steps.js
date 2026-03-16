@@ -246,6 +246,8 @@ const STEPS = [
   <li>你无法自行注册——需要联系你的 IT 管理员</li>
 </ul>
 
+<div class="info-box success"><span class="info-box-icon">⭐</span><span class="info-box-text"><strong>微软员工推荐使用 EMU 账号：</strong><br>如果你是微软员工，强烈建议使用 EMU 账号来使用 Copilot CLI。微软已为 EMU 账号预配置了 Copilot Enterprise 许可证，功能更全、无需额外付费。使用 EMU 账号还能确保你的工作符合公司的安全与合规要求。</span></div>
+
 <div class="info-box info"><span class="info-box-icon">🏢</span><span class="info-box-text"><strong>微软员工（Microsoft FTE）请注意：</strong><br>请参考 <a href="https://aka.ms/copilot" target="_blank" rel="noopener">aka.ms/copilot</a> 中的引导来激活你的 EMU 账号。</span></div>
 
 <div class="info-box info"><span class="info-box-icon">🤝</span><span class="info-box-text"><strong>微软非正式员工（Vendor）请注意：</strong><br><ol style="margin:8px 0 0 16px;"><li>请先访问 <a href="https://aka.ms/copilot/vendors" target="_blank" rel="noopener">aka.ms/copilot/vendors</a> 中的指导</li><li><strong>Request Membership</strong>（申请成员资格）— 这需要你的经理批准。请确保已连接 VPN，因为该页面会跳转到 Core Identity 系统</li><li>在获得批准之前，你<strong>无法</strong>继续后续步骤。请等待审批通过后再继续本教程</li></ol></span></div>
@@ -261,6 +263,8 @@ const STEPS = [
   <li>You may need to log in through your company's SSO (Single Sign-On) system</li>
   <li>You cannot sign up yourself — contact your IT admin</li>
 </ul>
+
+<div class="info-box success"><span class="info-box-icon">⭐</span><span class="info-box-text"><strong>Microsoft employees: EMU account is recommended.</strong><br>If you are a Microsoft employee, we strongly recommend using your EMU account for Copilot CLI. Microsoft has pre-configured Copilot Enterprise licenses for EMU accounts — more features, no extra cost. Using your EMU account also ensures your work complies with company security and compliance requirements.</span></div>
 
 <div class="info-box info"><span class="info-box-icon">🏢</span><span class="info-box-text"><strong>Microsoft employees (FTEs):</strong><br>Please follow the guide at <a href="https://aka.ms/copilot" target="_blank" rel="noopener">aka.ms/copilot</a> to activate your EMU account.</span></div>
 
