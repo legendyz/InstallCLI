@@ -110,8 +110,13 @@ body {
 .step-label { padding-top: 2px; }
 .btn-reset {
   margin-top: 16px; font-size: .85rem;
-  color: var(--c-text-secondary);
+  width: 100%; padding: 8px 12px;
+  border: 1px solid var(--c-danger); border-radius: var(--radius);
+  background: transparent; color: var(--c-danger);
+  cursor: pointer; font-weight: 500;
+  transition: background var(--transition), color var(--transition);
 }
+.btn-reset:hover { background: var(--c-danger); color: #fff; }
 
 /* ===== Main Content ===== */
 .main-content {
