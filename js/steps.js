@@ -302,8 +302,19 @@ const STEPS = [
       },
       emu: {
         zh: `<h3>EMU 账号的 Copilot 权限</h3>
-<p>使用企业 EMU 账号时，Copilot 的访问权限由你的企业管理员统一管理，你<strong>不需要自己订阅</strong>。</p>
-<div class="info-box info"><span class="info-box-icon">🏢</span><span class="info-box-text"><strong>微软员工：</strong>请访问 <a href="https://aka.ms/copilot" target="_blank" rel="noopener">aka.ms/copilot</a> 确认你的 Copilot 权限已激活。</span></div>
+<p>使用企业 EMU 账号时，Copilot 的访问权限由你的企业管理员统一管理，你<strong>不需要自己付费订阅</strong>。</p>
+
+<h3>EMU 账号获取 Copilot 订阅的方式</h3>
+<p>与个人账号不同，EMU 用户不需要自行在 GitHub 上购买订阅。企业的 Copilot 授权流程通常是这样的：</p>
+<ol>
+  <li><strong>企业管理员</strong>在 GitHub Enterprise 中购买 Copilot Business 或 Copilot Enterprise 许可证</li>
+  <li>管理员在企业设置中<strong>启用 Copilot 策略</strong>，选择哪些组织/团队可以使用</li>
+  <li>管理员将<strong>许可证分配给具体用户</strong>（或设置为团队内自动分配）</li>
+  <li>被分配的用户<strong>自动获得 Copilot 权限</strong>，无需额外操作</li>
+</ol>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">简单来说：你不需要做任何购买操作，只需要确认你的管理员已经给你分配了权限。如果还没有，请联系管理员申请。</span></div>
+
+<div class="info-box info"><span class="info-box-icon">🏢</span><span class="info-box-text"><strong>微软员工：</strong>请访问 <a href="https://aka.ms/copilot" target="_blank" rel="noopener">aka.ms/copilot</a> 确认你的 Copilot 权限已激活。微软已为员工统一配置了 Copilot 许可证，通常不需要额外申请。</span></div>
 <div class="info-box info"><span class="info-box-icon">🤝</span><span class="info-box-text"><strong>微软非正式员工（Vendor）：</strong><br>如果你在第 4 步中已经完成了 Vendor 的申请流程，这里不需要重复操作。你的 Copilot 权限会在 Membership 审批通过后自动激活。<br><br>如果你还没有完成申请，请先回到第 4 步，按照以下流程操作：<ol style="margin:8px 0 0 16px;"><li>访问 <a href="https://aka.ms/copilot/vendors" target="_blank" rel="noopener">aka.ms/copilot/vendors</a> 中的指导</li><li><strong>Request Membership</strong>（申请成员资格）— 需要经理批准，请确保已连接 VPN，因为该页面会跳转到 Core Identity 系统</li><li>获得批准前<strong>无法</strong>继续后续步骤</li></ol></span></div>
 <div class="info-box info"><span class="info-box-icon">📋</span><span class="info-box-text">
 <strong>其他公司的 EMU 用户，如果 Copilot 还没有开通：</strong><br>
@@ -312,8 +323,19 @@ const STEPS = [
 </span></div>
 <p>管理员开通后，你在下一步登录时就会自动获得 Copilot 使用权限。</p>`,
         en: `<h3>Copilot access for EMU accounts</h3>
-<p>With an EMU account, Copilot access is managed by your enterprise admin. You <strong>don't need to subscribe individually</strong>.</p>
-<div class="info-box info"><span class="info-box-icon">🏢</span><span class="info-box-text"><strong>Microsoft employees:</strong> Visit <a href="https://aka.ms/copilot" target="_blank" rel="noopener">aka.ms/copilot</a> to verify your Copilot access is activated.</span></div>
+<p>With an EMU account, Copilot access is managed by your enterprise admin. You <strong>don't need to pay for a subscription yourself</strong>.</p>
+
+<h3>How EMU accounts get Copilot access</h3>
+<p>Unlike personal accounts, EMU users don't purchase subscriptions on GitHub. The enterprise Copilot licensing process typically works like this:</p>
+<ol>
+  <li>Your <strong>enterprise admin</strong> purchases Copilot Business or Copilot Enterprise licenses in GitHub Enterprise</li>
+  <li>The admin <strong>enables Copilot policies</strong> in enterprise settings, choosing which organizations/teams can use it</li>
+  <li>The admin <strong>assigns licenses to specific users</strong> (or configures automatic assignment for teams)</li>
+  <li>Assigned users <strong>automatically get Copilot access</strong> — no extra steps needed</li>
+</ol>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">In short: you don't need to make any purchases. Just confirm that your admin has assigned you a license. If not, contact them to request access.</span></div>
+
+<div class="info-box info"><span class="info-box-icon">🏢</span><span class="info-box-text"><strong>Microsoft employees:</strong> Visit <a href="https://aka.ms/copilot" target="_blank" rel="noopener">aka.ms/copilot</a> to verify your Copilot access is activated. Microsoft has pre-configured Copilot licenses for employees — usually no extra application is needed.</span></div>
 <div class="info-box info"><span class="info-box-icon">🤝</span><span class="info-box-text"><strong>Microsoft non-FTEs (Vendor):</strong><br>If you already completed the vendor application process in Step 4, you don\'t need to repeat it here. Your Copilot access will be activated automatically once your Membership request is approved.<br><br>If you haven\'t completed the application yet, please go back to Step 4 and follow these steps:<ol style="margin:8px 0 0 16px;"><li>Follow the directions at <a href="https://aka.ms/copilot/vendors" target="_blank" rel="noopener">aka.ms/copilot/vendors</a></li><li><strong>Request Membership</strong> — this will require your manager\'s approval. Ensure you have VPN enabled as this will take you to Core Identity</li><li>You will <strong>not</strong> be able to proceed until approval is granted</li></ol></span></div>
 <div class="info-box info"><span class="info-box-icon">📋</span><span class="info-box-text">
 <strong>EMU users at other companies — if Copilot is not enabled yet:</strong><br>
