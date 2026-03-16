@@ -88,9 +88,11 @@ const STEPS = [
 <div class="command-block"><code>winget install Microsoft.PowerShell</code><button class="btn-copy" data-cmd="winget install Microsoft.PowerShell"></button></div>
 
 <h3>第三步：确认安装成功</h3>
-<p>安装完成后，<strong>关闭当前终端窗口</strong>，再打开一个新的终端，运行：</p>
-<div class="command-block"><code>$PSVersionTable.PSVersion</code><button class="btn-copy" data-cmd="$PSVersionTable.PSVersion"></button></div>
-<p>现在 Major 应该显示 <strong>7</strong>。</p>
+<p>安装完成后，运行以下命令来确认 PowerShell 7 已经安装到你的电脑上：</p>
+<div class="command-block"><code>pwsh --version</code><button class="btn-copy" data-cmd="pwsh --version"></button></div>
+<p>如果看到类似 <code>PowerShell 7.x.x</code> 的输出，说明安装成功 ✅</p>
+
+<div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text"><strong>重要提示：</strong>安装完 PowerShell 7 后，如果你仍然在原来的 PowerShell 5.1 窗口中运行 <code>$PSVersionTable.PSVersion</code>，显示的<strong>仍然是版本 5</strong>——这是正常的！这只说明你当前打开的窗口是旧版本，并不代表安装失败。<br><br>Copilot CLI 不在乎你用哪个版本的 PowerShell 窗口，它会自动在后台找到并使用 PowerShell 7。所以<strong>不需要</strong>特意去打开 PowerShell 7 窗口。</span></div>
 
 <div class="info-box success"><span class="info-box-icon">✅</span><span class="info-box-text"><strong>PowerShell 7 和旧版 PowerShell 5.1 可以共存，</strong>不会互相影响。安装 PowerShell 7 不会破坏你电脑上的任何东西。</span></div>`,
         en: `<h3>Step 1: Check if you need to install</h3>
@@ -108,9 +110,11 @@ const STEPS = [
 <div class="command-block"><code>winget install Microsoft.PowerShell</code><button class="btn-copy" data-cmd="winget install Microsoft.PowerShell"></button></div>
 
 <h3>Step 3: Verify the installation</h3>
-<p>After installation, <strong>close your current terminal window</strong>, open a new one, and run:</p>
-<div class="command-block"><code>$PSVersionTable.PSVersion</code><button class="btn-copy" data-cmd="$PSVersionTable.PSVersion"></button></div>
-<p>The Major version should now show <strong>7</strong>.</p>
+<p>After installation, run this command to confirm PowerShell 7 is installed on your computer:</p>
+<div class="command-block"><code>pwsh --version</code><button class="btn-copy" data-cmd="pwsh --version"></button></div>
+<p>If you see output like <code>PowerShell 7.x.x</code>, the installation was successful ✅</p>
+
+<div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text"><strong>Important:</strong> After installing PowerShell 7, if you run <code>$PSVersionTable.PSVersion</code> in your current PowerShell 5.1 window, it will <strong>still show version 5</strong> — this is completely normal! It just means the window you have open is the old version, not that the installation failed.<br><br>Copilot CLI doesn't care which PowerShell window you use — it automatically finds and uses PowerShell 7 in the background. You do <strong>not</strong> need to open a PowerShell 7 window specifically.</span></div>
 
 <div class="info-box success"><span class="info-box-icon">✅</span><span class="info-box-text"><strong>PowerShell 7 coexists with the old PowerShell 5.1</strong> — they don't interfere with each other. Installing PowerShell 7 won't break anything.</span></div>`,
       },
