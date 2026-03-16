@@ -340,7 +340,7 @@ Contact your IT admin and let them know:<br>
 <div class="command-block"><code>copilot</code><button class="btn-copy" data-cmd="copilot"></button></div>
 <p>进入 Copilot CLI 后，输入登录命令：</p>
 <div class="command-block"><code>/login</code><button class="btn-copy" data-cmd="/login"></button></div>
-<p>系统会给你一个 <strong>设备激活码</strong>，并自动打开浏览器。按照浏览器中的提示：</p>
+<p>系统会给你一个 <strong>设备激活码</strong>，并自动打开浏览器。<strong>浏览器可能需要几秒钟才会弹出，请耐心等待。</strong>按照浏览器中的提示：</p>
 <ol>
   <li>输入显示的激活码</li>
   <li>用你的 GitHub 账号登录</li>
@@ -352,7 +352,7 @@ Contact your IT admin and let them know:<br>
 <div class="command-block"><code>copilot</code><button class="btn-copy" data-cmd="copilot"></button></div>
 <p>Once Copilot CLI starts, type the login command:</p>
 <div class="command-block"><code>/login</code><button class="btn-copy" data-cmd="/login"></button></div>
-<p>The system will give you a <strong>device activation code</strong> and open your browser. Follow the prompts:</p>
+<p>The system will give you a <strong>device activation code</strong> and open your browser. <strong>The browser may take a few seconds to pop up — please be patient.</strong> Follow the prompts:</p>
 <ol>
   <li>Enter the activation code shown in the terminal</li>
   <li>Log in with your GitHub account</li>
