@@ -248,7 +248,7 @@ const STEPS = [
 
 <div class="info-box info"><span class="info-box-icon">🏢</span><span class="info-box-text"><strong>微软员工（Microsoft FTE）请注意：</strong><br>请参考 <a href="https://aka.ms/copilot" target="_blank" rel="noopener">aka.ms/copilot</a> 中的引导来激活你的 EMU 账号。</span></div>
 
-<div class="info-box info"><span class="info-box-icon">🤝</span><span class="info-box-text"><strong>微软非正式员工（Non-FTE / Vendor）请注意：</strong><br><ol style="margin:8px 0 0 16px;"><li>请先访问 <a href="https://aka.ms/copilot/vendors" target="_blank" rel="noopener">aka.ms/copilot/vendors</a> 中的指导</li><li><strong>Request Membership</strong>（申请成员资格）— 这需要你的经理批准。请确保已连接 VPN，因为该页面会跳转到 Core Identity 系统</li><li>在获得批准之前，你<strong>无法</strong>继续后续步骤。请等待审批通过后再继续本教程</li></ol></span></div>
+<div class="info-box info"><span class="info-box-icon">🤝</span><span class="info-box-text"><strong>微软非正式员工（Vendor）请注意：</strong><br><ol style="margin:8px 0 0 16px;"><li>请先访问 <a href="https://aka.ms/copilot/vendors" target="_blank" rel="noopener">aka.ms/copilot/vendors</a> 中的指导</li><li><strong>Request Membership</strong>（申请成员资格）— 这需要你的经理批准。请确保已连接 VPN，因为该页面会跳转到 Core Identity 系统</li><li>在获得批准之前，你<strong>无法</strong>继续后续步骤。请等待审批通过后再继续本教程</li></ol></span></div>
 
 <div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>建议同时创建个人 GitHub 账号：</strong><br>除了 EMU 账号之外，建议你也在 <a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a> 注册一个个人账号，并在 GitHub 设置中将个人账号与 EMU 账号关联。这样你可以在工作之外也使用 GitHub 的各种功能（如参与开源项目、管理个人代码等）。</span></div>
 
