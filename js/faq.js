@@ -101,8 +101,8 @@ const FAQS = {
     {
       q: { zh: 'Copilot Free 够用吗？有什么限制？', en: 'Is Copilot Free enough? What are the limits?' },
       a: {
-        zh: 'Copilot Free 提供基本的 AI 代码辅助功能，对于学习和轻度使用完全足够。主要区别在于：<ul><li><strong>Free</strong>：每月有一定的使用次数限制，但对大多数人来说完全够用</li><li><strong>Pro</strong>：无限使用次数，更多高级功能</li></ul><br>建议先用 Free 版本体验，有需要再升级。',
-        en: 'Copilot Free provides basic AI coding assistance and is perfectly fine for learning and light use. The main differences:<ul><li><strong>Free</strong>: Monthly usage limits, but sufficient for most people</li><li><strong>Pro</strong>: Unlimited usage, more advanced features</li></ul><br>Start with Free and upgrade later if needed.',
+        zh: 'Copilot Free 提供基本的 AI 代码辅助功能，对于学习和轻度使用完全足够。具体额度：<ul><li><strong>Free</strong>：每月 2,000 次代码补全 + 50 次高级请求（用于聊天、Agent 模式等），对大多数入门用户够用</li><li><strong>Pro（$10/月）</strong>：无限代码补全 + 每月 300 次高级请求</li><li><strong>Pro+（$39/月）</strong>：无限代码补全 + 每月 1,500 次高级请求，优先使用最新顶级模型</li></ul><br>Copilot CLI 中的对话交互会消耗"高级请求"额度。建议先用 Free 版本体验，有需要再升级。',
+        en: 'Copilot Free provides basic AI coding assistance and is perfectly fine for learning and light use. Specific limits:<ul><li><strong>Free</strong>: 2,000 code completions + 50 premium requests per month (used for chat, agent mode, etc.) — enough for most beginners</li><li><strong>Pro ($10/mo)</strong>: Unlimited completions + 300 premium requests/month</li><li><strong>Pro+ ($39/mo)</strong>: Unlimited completions + 1,500 premium requests/month, priority access to top-tier models</li></ul><br>Conversations in Copilot CLI consume "premium requests". Start with Free and upgrade later if needed.',
       },
     },
   ],

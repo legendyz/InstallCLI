@@ -146,8 +146,9 @@ const STEPS = [
 <div class="info-box info"><span class="info-box-icon">ℹ️</span><span class="info-box-text">安装过程中可能会弹出用户权限确认，请点击"是"。如果提示 winget 不可用，请先更新"应用安装程序"——在 Microsoft Store 中搜索"应用安装程序"并更新。</span></div>
 
 <h3>备选方式：使用 npm 安装</h3>
-<p>如果你已经安装了 Node.js，也可以用 npm：</p>
-<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>`,
+<p>如果你已经安装了 Node.js（需要 <strong>22 或更高版本</strong>），也可以用 npm：</p>
+<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">使用 npm 安装需要 <strong>Node.js 22+</strong>。可以运行 <code>node --version</code> 检查你的版本。如果版本过低，请先到 <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a> 下载最新的 LTS 版本。</span></div>`,
         en: `<h3>Recommended: Install with winget</h3>
 <p><strong>winget</strong> is Windows' built-in package manager — it lets you install software with a single command.</p>
 <div class="command-block"><code>winget install GitHub.Copilot</code><button class="btn-copy" data-cmd="winget install GitHub.Copilot"></button></div>
@@ -155,8 +156,9 @@ const STEPS = [
 <div class="info-box info"><span class="info-box-icon">ℹ️</span><span class="info-box-text">You may see a permission prompt during installation — click "Yes". If winget is not available, update "App Installer" from the Microsoft Store.</span></div>
 
 <h3>Alternative: Install with npm</h3>
-<p>If you already have Node.js installed, you can also use npm:</p>
-<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>`,
+<p>If you have Node.js installed (<strong>version 22 or later</strong> required), you can also use npm:</p>
+<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">npm installation requires <strong>Node.js 22+</strong>. Run <code>node --version</code> to check. If your version is too old, download the latest LTS version from <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a>.</span></div>`,
       },
       macos: {
         zh: `<h3>推荐方式：使用 Homebrew 安装</h3>
@@ -167,6 +169,7 @@ const STEPS = [
 <div class="command-block"><code>brew install copilot-cli</code><button class="btn-copy" data-cmd="brew install copilot-cli"></button></div>
 
 <h3>备选方式：使用 npm 安装</h3>
+<p>如果你已经安装了 Node.js（需要 <strong>22 或更高版本</strong>）：</p>
 <div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>`,
         en: `<h3>Recommended: Install with Homebrew</h3>
 <p><strong>Homebrew</strong> is the most popular package manager for macOS.</p>
@@ -176,6 +179,7 @@ const STEPS = [
 <div class="command-block"><code>brew install copilot-cli</code><button class="btn-copy" data-cmd="brew install copilot-cli"></button></div>
 
 <h3>Alternative: Install with npm</h3>
+<p>Requires <strong>Node.js 22+</strong>:</p>
 <div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>`,
       },
       linux: {
@@ -184,12 +188,14 @@ const STEPS = [
 <div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">这行命令会从 GitHub 下载安装脚本并自动执行。如果你更喜欢 wget：<br><code>wget -qO- https://gh.io/copilot-install | bash</code></span></div>
 
 <h3>备选方式：使用 npm 安装</h3>
+<p>如果你已经安装了 Node.js（需要 <strong>22 或更高版本</strong>）：</p>
 <div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>`,
         en: `<h3>Recommended: Install with the install script</h3>
 <div class="command-block"><code>curl -fsSL https://gh.io/copilot-install | bash</code><button class="btn-copy" data-cmd="curl -fsSL https://gh.io/copilot-install | bash"></button></div>
 <div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">This downloads and runs the install script from GitHub. If you prefer wget:<br><code>wget -qO- https://gh.io/copilot-install | bash</code></span></div>
 
 <h3>Alternative: Install with npm</h3>
+<p>Requires <strong>Node.js 22+</strong>:</p>
 <div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>`,
       },
     },
@@ -282,25 +288,29 @@ const STEPS = [
     id: 'subscription',
     title:       { zh: '获取 Copilot 订阅', en: 'Get Copilot Access' },
     description: {
-      zh: '<p>Copilot CLI 需要 GitHub Copilot 订阅才能使用。好消息是——GitHub 提供免费版本！</p>',
-      en: '<p>Copilot CLI requires a GitHub Copilot subscription. The good news — GitHub offers a free tier!</p>',
+      zh: '<p>Copilot CLI 需要 GitHub Copilot 订阅才能使用。好消息是——GitHub 提供免费版本！Copilot CLI 已于 2026 年 2 月正式发布（GA），功能稳定可靠。</p>',
+      en: '<p>Copilot CLI requires a GitHub Copilot subscription. The good news — GitHub offers a free tier! Copilot CLI became generally available (GA) in February 2026, so it\'s stable and ready for production use.</p>',
     },
     content: {
       personal: {
         zh: `<h3>选择 Copilot 方案</h3>
 <table style="width:100%;border-collapse:collapse;margin:12px 0;">
-  <tr style="background:var(--c-bg);"><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">方案</th><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">价格</th><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">适合</th></tr>
-  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);">Copilot Free</td><td style="padding:8px 12px;border:1px solid var(--c-border);">免费</td><td style="padding:8px 12px;border:1px solid var(--c-border);">个人学习、轻度使用</td></tr>
-  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);">Copilot Pro</td><td style="padding:8px 12px;border:1px solid var(--c-border);">$10/月</td><td style="padding:8px 12px;border:1px solid var(--c-border);">专业开发者</td></tr>
+  <tr style="background:var(--c-bg);"><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">方案</th><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">价格</th><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">包含</th><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">适合</th></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);">Copilot Free</td><td style="padding:8px 12px;border:1px solid var(--c-border);">免费</td><td style="padding:8px 12px;border:1px solid var(--c-border);">每月 2,000 次代码补全 + 50 次高级请求</td><td style="padding:8px 12px;border:1px solid var(--c-border);">个人学习、轻度使用</td></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);">Copilot Pro</td><td style="padding:8px 12px;border:1px solid var(--c-border);">$10/月</td><td style="padding:8px 12px;border:1px solid var(--c-border);">无限代码补全 + 每月 300 次高级请求</td><td style="padding:8px 12px;border:1px solid var(--c-border);">专业开发者</td></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);">Copilot Pro+</td><td style="padding:8px 12px;border:1px solid var(--c-border);">$39/月</td><td style="padding:8px 12px;border:1px solid var(--c-border);">无限代码补全 + 每月 1,500 次高级请求</td><td style="padding:8px 12px;border:1px solid var(--c-border);">重度用户、需要顶级模型</td></tr>
 </table>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>什么是"高级请求"？</strong>高级请求用于聊天、Agent 模式、选择高级模型等功能。Copilot CLI 中的对话交互会消耗高级请求额度。Free 版每月 50 次对大多数新手来说足够体验。</span></div>
 <p>对于刚入门的你，<strong>免费版完全够用</strong>。</p>
 <p><a href="https://github.com/settings/copilot" target="_blank" rel="noopener">👉 前往 GitHub Copilot 设置页面开通</a></p>`,
         en: `<h3>Choose a Copilot plan</h3>
 <table style="width:100%;border-collapse:collapse;margin:12px 0;">
-  <tr style="background:var(--c-bg);"><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">Plan</th><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">Price</th><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">Best for</th></tr>
-  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);">Copilot Free</td><td style="padding:8px 12px;border:1px solid var(--c-border);">Free</td><td style="padding:8px 12px;border:1px solid var(--c-border);">Learning, light usage</td></tr>
-  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);">Copilot Pro</td><td style="padding:8px 12px;border:1px solid var(--c-border);">$10/mo</td><td style="padding:8px 12px;border:1px solid var(--c-border);">Professional developers</td></tr>
+  <tr style="background:var(--c-bg);"><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">Plan</th><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">Price</th><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">Includes</th><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">Best for</th></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);">Copilot Free</td><td style="padding:8px 12px;border:1px solid var(--c-border);">Free</td><td style="padding:8px 12px;border:1px solid var(--c-border);">2,000 code completions + 50 premium requests/mo</td><td style="padding:8px 12px;border:1px solid var(--c-border);">Learning, light usage</td></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);">Copilot Pro</td><td style="padding:8px 12px;border:1px solid var(--c-border);">$10/mo</td><td style="padding:8px 12px;border:1px solid var(--c-border);">Unlimited completions + 300 premium requests/mo</td><td style="padding:8px 12px;border:1px solid var(--c-border);">Professional developers</td></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);">Copilot Pro+</td><td style="padding:8px 12px;border:1px solid var(--c-border);">$39/mo</td><td style="padding:8px 12px;border:1px solid var(--c-border);">Unlimited completions + 1,500 premium requests/mo</td><td style="padding:8px 12px;border:1px solid var(--c-border);">Power users, top-tier models</td></tr>
 </table>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>What are "premium requests"?</strong> Premium requests are used for chat, agent mode, and selecting advanced AI models. Conversations in Copilot CLI consume premium requests. The Free tier's 50/month is plenty for most beginners to get started.</span></div>
 <p>For getting started, the <strong>free tier is more than enough</strong>.</p>
 <p><a href="https://github.com/settings/copilot" target="_blank" rel="noopener">👉 Go to GitHub Copilot settings to enable it</a></p>`,
       },
@@ -406,7 +416,7 @@ Contact your IT admin and let them know:<br>
         zh: `<h3>检查版本</h3>
 <p>在 <strong>PowerShell</strong>（Windows 用户）或终端（macOS/Linux 用户）中运行：</p>
 <div class="command-block"><code>copilot --version</code><button class="btn-copy" data-cmd="copilot --version"></button></div>
-<p>如果看到版本号（例如 <code>0.x.x</code>），说明安装成功！</p>
+<p>如果看到版本号（例如 <code>1.x.x</code>），说明安装成功！</p>
 
 <div class="info-box success"><span class="info-box-icon">✅</span><span class="info-box-text">看到版本号了？太好了，Copilot CLI 已经成功安装在你的电脑上了！</span></div>
 
@@ -414,7 +424,7 @@ Contact your IT admin and let them know:<br>
         en: `<h3>Check the version</h3>
 <p>In <strong>PowerShell</strong> (Windows) or your terminal (macOS/Linux), run:</p>
 <div class="command-block"><code>copilot --version</code><button class="btn-copy" data-cmd="copilot --version"></button></div>
-<p>If you see a version number (e.g. <code>0.x.x</code>), the installation is successful!</p>
+<p>If you see a version number (e.g. <code>1.x.x</code>), the installation is successful!</p>
 
 <div class="info-box success"><span class="info-box-icon">✅</span><span class="info-box-text">See a version number? Great — Copilot CLI is successfully installed on your machine!</span></div>
 
