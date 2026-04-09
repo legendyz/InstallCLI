@@ -4,10 +4,11 @@ const STEPS = [
   // ── Step 1: Open Terminal ──
   {
     id: 'terminal',
-    title:       { zh: '学会打开终端', en: 'Open the Terminal' },
+    title:       { zh: '学会打开终端', en: 'Open the Terminal', ja: 'ターミナルを開こう' },
     description: {
       zh: '<p>终端（Terminal）是你和电脑用文字"对话"的窗口。安装 Copilot CLI 的所有操作都在终端里进行。</p>',
       en: '<p>The terminal is a text-based window where you type commands to interact with your computer. All Copilot CLI installation steps happen here.</p>',
+      ja: '<p>ターミナル（Terminal）は、コマンドを入力してコンピュータと対話するためのテキストベースのウィンドウです。Copilot CLI のインストール手順はすべてここで行います。</p>',
     },
     content: {
       windows: {
@@ -25,6 +26,13 @@ const STEPS = [
   <li>Click <strong>"Windows PowerShell"</strong> or <strong>"Terminal"</strong> that appears</li>
 </ol>
 <div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text"><strong>Important:</strong> Use PowerShell, not CMD (Command Prompt). Copilot CLI does not support CMD on Windows — it only runs in PowerShell. In the next step, we'll make sure your PowerShell version meets the requirements.</span></div>`,
+        ja: `<h3>Windows でターミナルを開く方法</h3>
+<ol>
+  <li>キーボードの <strong>Win キー</strong>（左下にある Windows ロゴのキー）を押します</li>
+  <li><strong>PowerShell</strong> または <strong>Terminal</strong> と入力します</li>
+  <li>表示された <strong>"Windows PowerShell"</strong> または <strong>"ターミナル"</strong> をクリックします</li>
+</ol>
+<div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text"><strong>重要：</strong>CMD（コマンドプロンプト）ではなく、PowerShell を使用してください。Copilot CLI は Windows 上の CMD には対応しておらず、PowerShell でのみ動作します。次のステップで PowerShell のバージョンが要件を満たしているか確認します。</span></div>`,
       },
       macos: {
         zh: `<h3>macOS 打开终端的方法</h3>
@@ -41,6 +49,13 @@ const STEPS = [
   <li>Press Enter to open it</li>
 </ol>
 <div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">You can also find it in Applications → Utilities → Terminal.</span></div>`,
+        ja: `<h3>macOS でターミナルを開く方法</h3>
+<ol>
+  <li><strong>Command + スペース</strong>を押して Spotlight を開きます</li>
+  <li><strong>Terminal</strong> と入力します</li>
+  <li>Enter キーを押して開きます</li>
+</ol>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">アプリケーション → ユーティリティ → ターミナル からも見つけることができます。</span></div>`,
       },
       linux: {
         zh: `<h3>Linux 打开终端的方法</h3>
@@ -53,11 +68,17 @@ const STEPS = [
   <li>Press <strong>Ctrl + Alt + T</strong> (works on most distributions)</li>
   <li>Or search for <strong>"Terminal"</strong> in your application menu</li>
 </ol>`,
+        ja: `<h3>Linux でターミナルを開く方法</h3>
+<ol>
+  <li><strong>Ctrl + Alt + T</strong> を押します（ほとんどのディストリビューションで使えます）</li>
+  <li>またはアプリケーションメニューで <strong>"Terminal"</strong> を検索します</li>
+</ol>`,
       },
     },
     verification: {
       zh: '<p>在终端里输入下面的命令，然后按回车。如果看到输出 <code>hello</code>，说明终端已经正常工作了！</p>',
       en: '<p>Type the following command in your terminal and press Enter. If you see <code>hello</code> in the output, your terminal is working!</p>',
+      ja: '<p>ターミナルに以下のコマンドを入力して Enter キーを押してください。<code>hello</code> と表示されれば、ターミナルは正常に動作しています！</p>',
     },
     verifyCommand: 'echo hello',
   },
@@ -65,11 +86,12 @@ const STEPS = [
   // ── Step 2: Install PowerShell 7 (Windows only) ──
   {
     id: 'powershell',
-    title:       { zh: '安装 PowerShell 7', en: 'Install PowerShell 7' },
+    title:       { zh: '安装 PowerShell 7', en: 'Install PowerShell 7', ja: 'PowerShell 7 をインストール' },
     windowsOnly: true,
     description: {
       zh: '<p>Copilot CLI 在 Windows 上需要 <strong>PowerShell 7</strong>（pwsh.exe）。大多数电脑没有预装，但有些可能已经有了。让我们先检查一下。</p>',
       en: '<p>Copilot CLI on Windows needs <strong>PowerShell 7</strong> (pwsh.exe). Most computers don\'t have it pre-installed, but some might. Let\'s check first.</p>',
+      ja: '<p>Windows で Copilot CLI を使うには <strong>PowerShell 7</strong>（pwsh.exe）が必要です。ほとんどのパソコンにはプリインストールされていませんが、すでにインストール済みの場合もあります。まず確認しましょう。</p>',
     },
     content: {
       windows: {
@@ -117,14 +139,38 @@ const STEPS = [
 <div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text"><strong>Important:</strong> After installing PowerShell 7, if you run <code>$PSVersionTable.PSVersion</code> in your current PowerShell 5.1 window, it will <strong>still show version 5</strong> — this is completely normal! It just means the window you have open is the old version, not that the installation failed.<br><br>Copilot CLI doesn't care which PowerShell window you use — it automatically finds and uses PowerShell 7 in the background. You do <strong>not</strong> need to open a PowerShell 7 window specifically.</span></div>
 
 <div class="info-box success"><span class="info-box-icon">✅</span><span class="info-box-text"><strong>PowerShell 7 coexists with the old PowerShell 5.1</strong> — they don't interfere with each other. Installing PowerShell 7 won't break anything.</span></div>`,
+        ja: `<h3>ステップ 1：インストールが必要か確認する</h3>
+<p>ターミナルで以下のコマンドを実行してください：</p>
+<div class="command-block"><code>$PSVersionTable.PSVersion</code><button class="btn-copy" data-cmd="$PSVersionTable.PSVersion"></button></div>
+<ul>
+  <li><strong>Major</strong> の数字が <strong>7</strong> 以上の場合 → すでにインストール済みです。このステップはスキップしてください ✅</li>
+  <li><strong>5</strong>（つまり 5.1）と表示された場合 → 以下のインストール手順に進んでください</li>
+</ul>
+
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>現在 PowerShell 5.1 を使っていても心配いりません：</strong>パソコンに PowerShell 7 がインストールされていれば、Copilot CLI が自動的に見つけてくれます。PowerShell 7 のウィンドウから起動する必要はありません。</span></div>
+
+<h3>ステップ 2：PowerShell 7 をインストール</h3>
+<p>winget を使ったワンコマンドインストールがおすすめです：</p>
+<div class="command-block"><code>winget install Microsoft.PowerShell</code><button class="btn-copy" data-cmd="winget install Microsoft.PowerShell"></button></div>
+
+<h3>ステップ 3：インストールを確認する</h3>
+<p>インストール完了後、以下のコマンドを実行して PowerShell 7 がインストールされたか確認してください：</p>
+<div class="command-block"><code>pwsh --version</code><button class="btn-copy" data-cmd="pwsh --version"></button></div>
+<p><code>PowerShell 7.x.x</code> のような出力が表示されれば、インストール成功です ✅</p>
+
+<div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text"><strong>重要：</strong>PowerShell 7 をインストールした後でも、元の PowerShell 5.1 のウィンドウで <code>$PSVersionTable.PSVersion</code> を実行すると<strong>バージョン 5 と表示されます</strong>——これは正常です！現在開いているウィンドウが旧バージョンであるだけで、インストールが失敗したわけではありません。<br><br>Copilot CLI はどの PowerShell ウィンドウを使っているかは気にしません——バックグラウンドで自動的に PowerShell 7 を見つけて使用します。わざわざ PowerShell 7 のウィンドウを開く<strong>必要はありません</strong>。</span></div>
+
+<div class="info-box success"><span class="info-box-icon">✅</span><span class="info-box-text"><strong>PowerShell 7 は旧バージョンの PowerShell 5.1 と共存できます。</strong>互いに干渉しません。PowerShell 7 をインストールしても既存の環境を壊すことはありません。</span></div>`,
       },
       macos: {
         zh: `<div class="info-box success"><span class="info-box-icon">✅</span><span class="info-box-text">macOS 不需要这一步！macOS 自带的终端已经满足 Copilot CLI 的要求。请直接点击"我已完成这一步"继续。</span></div>`,
         en: `<div class="info-box success"><span class="info-box-icon">✅</span><span class="info-box-text">macOS doesn't need this step! The built-in terminal already meets Copilot CLI's requirements. Click "I've completed this step" to continue.</span></div>`,
+        ja: `<div class="info-box success"><span class="info-box-icon">✅</span><span class="info-box-text">macOS ではこのステップは不要です！組み込みのターミナルがすでに Copilot CLI の要件を満たしています。「このステップを完了しました」をクリックして次に進んでください。</span></div>`,
       },
       linux: {
         zh: `<div class="info-box success"><span class="info-box-icon">✅</span><span class="info-box-text">Linux 不需要这一步！Linux 的终端已经满足 Copilot CLI 的要求。请直接点击"我已完成这一步"继续。</span></div>`,
         en: `<div class="info-box success"><span class="info-box-icon">✅</span><span class="info-box-text">Linux doesn't need this step! Your terminal already meets Copilot CLI's requirements. Click "I've completed this step" to continue.</span></div>`,
+        ja: `<div class="info-box success"><span class="info-box-icon">✅</span><span class="info-box-text">Linux ではこのステップは不要です！ターミナルはすでに Copilot CLI の要件を満たしています。「このステップを完了しました」をクリックして次に進んでください。</span></div>`,
       },
     },
   },
@@ -132,10 +178,11 @@ const STEPS = [
   // ── Step 3: Install Copilot CLI ──
   {
     id: 'install',
-    title:       { zh: '安装 Copilot CLI', en: 'Install Copilot CLI' },
+    title:       { zh: '安装 Copilot CLI', en: 'Install Copilot CLI', ja: 'Copilot CLI をインストール' },
     description: {
       zh: '<p>现在让我们安装 GitHub Copilot CLI。根据你的操作系统，复制下面的命令到终端中执行。</p>',
       en: '<p>Now let\'s install GitHub Copilot CLI. Copy the command below into your terminal and run it.</p>',
+      ja: '<p>それでは GitHub Copilot CLI をインストールしましょう。以下のコマンドをターミナルにコピーして実行してください。</p>',
     },
     content: {
       windows: {
@@ -159,6 +206,16 @@ const STEPS = [
 <p>If you have Node.js installed (<strong>version 22 or later</strong> required), you can also use npm:</p>
 <div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>
 <div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">npm installation requires <strong>Node.js 22+</strong>. Run <code>node --version</code> to check. If your version is too old, download the latest LTS version from <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a>.</span></div>`,
+        ja: `<h3>おすすめ：winget でインストール</h3>
+<p><strong>winget</strong> は Windows に組み込まれているパッケージマネージャーで、コマンド一つでソフトウェアをインストールできます。</p>
+<div class="command-block"><code>winget install GitHub.Copilot</code><button class="btn-copy" data-cmd="winget install GitHub.Copilot"></button></div>
+<div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text"><strong>こんな表示が出ることがあります：</strong>Copilot CLI は PowerShell 7 に依存しているため、winget はまず PowerShell 7 のインストールを試みます。パソコンに<strong>すでに PowerShell 7 がインストールされている</strong>場合、インストーラーが <code>installation abandoned</code> というウィンドウを表示することがあります。<br><br><strong>これは正常です——心配しないでください！</strong>PowerShell 7 がすでに存在しているため、再インストールの必要がないということです。ポップアップを閉じて、<strong>もう一度コマンドを実行</strong>してください：<code>winget install GitHub.Copilot</code>。今度は winget が PowerShell 7 をスキップして、直接 Copilot CLI をインストールします。</span></div>
+<div class="info-box info"><span class="info-box-icon">ℹ️</span><span class="info-box-text">インストール中にアクセス許可の確認が表示される場合があります——「はい」をクリックしてください。winget が利用できない場合は、Microsoft Store で「アプリ インストーラー」を更新してください。</span></div>
+
+<h3>代替方法：npm でインストール</h3>
+<p>Node.js がインストール済みの場合（<strong>バージョン 22 以上</strong>が必要）、npm も使えます：</p>
+<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">npm でのインストールには <strong>Node.js 22+</strong> が必要です。<code>node --version</code> でバージョンを確認してください。バージョンが古い場合は、<a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a> から最新の LTS バージョンをダウンロードしてください。</span></div>`,
       },
       macos: {
         zh: `<h3>推荐方式：使用 Homebrew 安装</h3>
@@ -181,6 +238,16 @@ const STEPS = [
 <h3>Alternative: Install with npm</h3>
 <p>Requires <strong>Node.js 22+</strong>:</p>
 <div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>`,
+        ja: `<h3>おすすめ：Homebrew でインストール</h3>
+<p><strong>Homebrew</strong> は macOS で最も人気のあるパッケージマネージャーです。</p>
+<p>Homebrew がまだインストールされていない場合は、まずこちらをインストールしてください：</p>
+<div class="command-block"><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code><button class="btn-copy" data-cmd='/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'></button></div>
+<p>次に Copilot CLI をインストールします：</p>
+<div class="command-block"><code>brew install copilot-cli</code><button class="btn-copy" data-cmd="brew install copilot-cli"></button></div>
+
+<h3>代替方法：npm でインストール</h3>
+<p><strong>Node.js 22+</strong> が必要です：</p>
+<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>`,
       },
       linux: {
         zh: `<h3>推荐方式：使用安装脚本</h3>
@@ -197,26 +264,36 @@ const STEPS = [
 <h3>Alternative: Install with npm</h3>
 <p>Requires <strong>Node.js 22+</strong>:</p>
 <div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>`,
+        ja: `<h3>おすすめ：インストールスクリプトを使用</h3>
+<div class="command-block"><code>curl -fsSL https://gh.io/copilot-install | bash</code><button class="btn-copy" data-cmd="curl -fsSL https://gh.io/copilot-install | bash"></button></div>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">このコマンドは GitHub からインストールスクリプトをダウンロードして実行します。wget をお好みの場合：<br><code>wget -qO- https://gh.io/copilot-install | bash</code></span></div>
+
+<h3>代替方法：npm でインストール</h3>
+<p><strong>Node.js 22+</strong> が必要です：</p>
+<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>`,
       },
     },
     verification: {
       zh: '<p>安装完成后，运行下面的命令来确认安装成功：</p>',
       en: '<p>After installation, run the following command to verify it worked:</p>',
+      ja: '<p>インストール完了後、以下のコマンドを実行してインストールが成功したか確認してください：</p>',
     },
     verifyCommand: 'copilot --version',
     verifyHint: {
       zh: '<p>如果看到类似 <code>GitHub Copilot CLI 1.x.x</code> 的输出，说明安装成功 ✅</p><div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text"><strong>如果提示"找不到命令"（copilot is not recognized）：</strong>请<strong>关闭当前终端窗口</strong>，重新打开一个新的终端，再试一次。安装新软件后，终端需要重新加载才能识别新命令。</span></div>',
       en: '<p>If you see output like <code>GitHub Copilot CLI 1.x.x</code>, the installation was successful ✅</p><div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text"><strong>If you see "copilot is not recognized":</strong> <strong>Close your current terminal window</strong>, open a new one, and try again. After installing new software, the terminal needs to reload to recognize new commands.</span></div>',
+      ja: '<p><code>GitHub Copilot CLI 1.x.x</code> のような出力が表示されれば、インストール成功です ✅</p><div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text"><strong>「copilot は認識されていません」と表示された場合：</strong><strong>現在のターミナルウィンドウを閉じて</strong>、新しいターミナルを開いてもう一度試してください。新しいソフトウェアをインストールした後、ターミナルは再読み込みしないと新しいコマンドを認識できません。</span></div>',
     },
   },
 
   // ── Step 3: GitHub Account ──
   {
     id: 'account',
-    title:       { zh: 'GitHub 账号准备', en: 'GitHub Account Setup' },
+    title:       { zh: 'GitHub 账号准备', en: 'GitHub Account Setup', ja: 'GitHub アカウントの準備' },
     description: {
       zh: '<p>使用 Copilot CLI 需要一个 GitHub 账号。GitHub 是全球最大的代码托管平台，也是 Copilot 的"大本营"。</p>',
       en: '<p>You need a GitHub account to use Copilot CLI. GitHub is the world\'s largest code hosting platform and the home of Copilot.</p>',
+      ja: '<p>Copilot CLI を使用するには GitHub アカウントが必要です。GitHub は世界最大のコードホスティングプラットフォームであり、Copilot の本拠地です。</p>',
     },
     hasAccountType: true,
     content: {
@@ -241,6 +318,16 @@ const STEPS = [
   <li>Verify your email</li>
 </ol>
 <div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">If you already have a GitHub account, just click "I've completed this step" to continue.</span></div>`,
+        ja: `<h3>個人 GitHub アカウントを作成する</h3>
+<p>まだ GitHub アカウントをお持ちでない場合は、以下のリンクから無料で登録してください：</p>
+<p><a href="https://github.com/signup" target="_blank" rel="noopener">👉 github.com/signup</a></p>
+<ol>
+  <li>メールアドレスを入力します</li>
+  <li>パスワードを設定します</li>
+  <li>ユーザー名を選びます</li>
+  <li>メールアドレスを確認します</li>
+</ol>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">すでに GitHub アカウントをお持ちの場合は、「このステップを完了しました」をクリックして次に進んでください。</span></div>`,
       },
       emu: {
         zh: `<h3>关于企业 EMU 账号</h3>
@@ -279,6 +366,24 @@ const STEPS = [
 <div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>We recommend also creating a personal GitHub account:</strong><br>In addition to your EMU account, consider signing up for a personal account at <a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a> and linking it to your EMU account in GitHub settings. This lets you use GitHub outside of work (e.g., contributing to open source, managing personal projects).</span></div>
 
 <div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text">If you don't have an EMU account yet, contact your company's IT department. Let them know you need a GitHub EMU account to use GitHub Copilot CLI.</span></div>`,
+        ja: `<h3>企業 EMU アカウントについて</h3>
+<p><strong>EMU（Enterprise Managed Users）</strong>は企業が一元管理する GitHub アカウントです。個人アカウントとは異なり：</p>
+<ul>
+  <li>アカウントは会社の IT 部門が作成・管理します</li>
+  <li>ユーザー名には通常、会社のサフィックスが付きます（例：<code>tanaka_contoso</code>）</li>
+  <li>ログイン時に会社の SSO（シングルサインオン）システムを経由する場合があります</li>
+  <li>自分で登録することはできません——IT 管理者に連絡してください</li>
+</ul>
+
+<div class="info-box success"><span class="info-box-icon">⭐</span><span class="info-box-text"><strong>Microsoft 社員の方へ：EMU アカウントの使用を推奨します。</strong><br>Microsoft 社員の場合、Copilot CLI には EMU アカウントの使用を強くお勧めします。Microsoft は EMU アカウント向けに Copilot Enterprise ライセンスを事前設定しています——より多くの機能を追加費用なしで利用できます。EMU アカウントを使用することで、会社のセキュリティおよびコンプライアンス要件にも準拠できます。</span></div>
+
+<div class="info-box info"><span class="info-box-icon">🏢</span><span class="info-box-text"><strong>Microsoft 社員（FTE）の方へ：</strong><br><a href="https://aka.ms/copilot" target="_blank" rel="noopener">aka.ms/copilot</a> のガイドに従って EMU アカウントを有効化してください。</span></div>
+
+<div class="info-box info"><span class="info-box-icon">🤝</span><span class="info-box-text"><strong>Microsoft 非正規社員（Vendor）の方へ：</strong><br><ol style="margin:8px 0 0 16px;"><li><a href="https://aka.ms/copilot/vendors" target="_blank" rel="noopener">aka.ms/copilot/vendors</a> の指示に従ってください</li><li><strong>Request Membership</strong>（メンバーシップの申請）——マネージャーの承認が必要です。Core Identity に移動するため、VPN が有効になっていることを確認してください</li><li>承認が得られるまで、このチュートリアルの後続のステップに<strong>進むことはできません</strong></li></ol></span></div>
+
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>個人 GitHub アカウントも併せて作成することをお勧めします：</strong><br>EMU アカウントに加えて、<a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a> で個人アカウントを作成し、GitHub の設定で EMU アカウントとリンクすることをお勧めします。これにより、業務外でも GitHub の機能を利用できます（オープンソースへの貢献、個人プロジェクトの管理など）。</span></div>
+
+<div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text">まだ EMU アカウントをお持ちでない場合は、会社の IT 部門に連絡してください。GitHub Copilot CLI を使用するために GitHub EMU アカウントが必要であることを伝えてください。</span></div>`,
       },
     },
   },
@@ -286,10 +391,11 @@ const STEPS = [
   // ── Step 4: Copilot Subscription ──
   {
     id: 'subscription',
-    title:       { zh: '获取 Copilot 订阅', en: 'Get Copilot Access' },
+    title:       { zh: '获取 Copilot 订阅', en: 'Get Copilot Access', ja: 'Copilot へのアクセスを取得' },
     description: {
       zh: '<p>Copilot CLI 需要 GitHub Copilot 订阅才能使用。好消息是——GitHub 提供免费版本！Copilot CLI 已于 2026 年 2 月正式发布（GA），功能稳定可靠。</p>',
       en: '<p>Copilot CLI requires a GitHub Copilot subscription. The good news — GitHub offers a free tier! Copilot CLI became generally available (GA) in February 2026, so it\'s stable and ready for production use.</p>',
+      ja: '<p>Copilot CLI を使用するには GitHub Copilot サブスクリプションが必要です。嬉しいことに、GitHub は無料プランを提供しています！Copilot CLI は 2026 年 2 月に正式リリース（GA）され、安定して本番利用が可能です。</p>',
     },
     content: {
       personal: {
@@ -313,6 +419,16 @@ const STEPS = [
 <div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>What are "premium requests"?</strong> Premium requests are used for chat, agent mode, and selecting advanced AI models. Conversations in Copilot CLI consume premium requests. The Free tier's 50/month is plenty for most beginners to get started.</span></div>
 <p>For getting started, the <strong>free tier is more than enough</strong>.</p>
 <p><a href="https://github.com/settings/copilot" target="_blank" rel="noopener">👉 Go to GitHub Copilot settings to enable it</a></p>`,
+        ja: `<h3>Copilot プランを選ぶ</h3>
+<table style="width:100%;border-collapse:collapse;margin:12px 0;">
+  <tr style="background:var(--c-bg);"><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">プラン</th><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">料金</th><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">内容</th><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">おすすめの方</th></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);">Copilot Free</td><td style="padding:8px 12px;border:1px solid var(--c-border);">無料</td><td style="padding:8px 12px;border:1px solid var(--c-border);">月 2,000 回のコード補完 + 50 回のプレミアムリクエスト</td><td style="padding:8px 12px;border:1px solid var(--c-border);">学習、軽い利用</td></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);">Copilot Pro</td><td style="padding:8px 12px;border:1px solid var(--c-border);">$10/月</td><td style="padding:8px 12px;border:1px solid var(--c-border);">無制限のコード補完 + 月 300 回のプレミアムリクエスト</td><td style="padding:8px 12px;border:1px solid var(--c-border);">プロの開発者</td></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);">Copilot Pro+</td><td style="padding:8px 12px;border:1px solid var(--c-border);">$39/月</td><td style="padding:8px 12px;border:1px solid var(--c-border);">無制限のコード補完 + 月 1,500 回のプレミアムリクエスト</td><td style="padding:8px 12px;border:1px solid var(--c-border);">ヘビーユーザー、最上位モデル</td></tr>
+</table>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>「プレミアムリクエスト」とは？</strong>プレミアムリクエストは、チャット、Agent モード、高度な AI モデルの選択などに使用されます。Copilot CLI での対話はプレミアムリクエストを消費します。Free プランの月 50 回は、ほとんどの初心者にとって十分な量です。</span></div>
+<p>これから始める方には、<strong>無料プランで十分です</strong>。</p>
+<p><a href="https://github.com/settings/copilot" target="_blank" rel="noopener">👉 GitHub Copilot の設定ページで有効にする</a></p>`,
       },
       emu: {
         zh: `<h3>EMU 账号的 Copilot 权限</h3>
@@ -357,6 +473,27 @@ Contact your IT admin and let them know:<br>
 "I need GitHub Copilot enabled on my GitHub EMU account to use Copilot CLI."
 </span></div>
 <p>Once enabled by your admin, you'll automatically get Copilot access when you log in.</p>`,
+        ja: `<h3>EMU アカウントの Copilot アクセス</h3>
+<p>EMU アカウントを使用する場合、Copilot のアクセス権限は企業の管理者が管理します。<strong>自分でサブスクリプションを購入する必要はありません</strong>。</p>
+
+<h3>EMU アカウントで Copilot アクセスを取得する方法</h3>
+<p>個人アカウントとは異なり、EMU ユーザーは GitHub でサブスクリプションを購入しません。企業の Copilot ライセンス付与は通常次のように行われます：</p>
+<ol>
+  <li><strong>企業管理者</strong>が GitHub Enterprise で Copilot Business または Copilot Enterprise ライセンスを購入します</li>
+  <li>管理者が企業設定で <strong>Copilot ポリシーを有効化</strong>し、使用できる組織/チームを選択します</li>
+  <li>管理者が<strong>特定のユーザーにライセンスを割り当て</strong>ます（またはチーム単位で自動割り当てを設定します）</li>
+  <li>割り当てられたユーザーは<strong>自動的に Copilot にアクセスできるようになります</strong>——追加の手順は不要です</li>
+</ol>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">つまり、何も購入する必要はありません。管理者がライセンスを割り当ててくれたことを確認するだけです。まだの場合は、管理者に連絡してアクセスを申請してください。</span></div>
+
+<div class="info-box info"><span class="info-box-icon">🏢</span><span class="info-box-text"><strong>Microsoft 社員の方へ：</strong><a href="https://aka.ms/copilot" target="_blank" rel="noopener">aka.ms/copilot</a> にアクセスして、Copilot のアクセスが有効になっているか確認してください。Microsoft は社員向けに Copilot ライセンスを事前設定しています——通常、追加の申請は不要です。</span></div>
+<div class="info-box info"><span class="info-box-icon">🤝</span><span class="info-box-text"><strong>Microsoft 非正規社員（Vendor）の方へ：</strong><br>ステップ 4 で Vendor の申請プロセスを完了している場合、ここで再度操作する必要はありません。Membership の申請が承認されると、Copilot のアクセス権限は自動的に有効化されます。<br><br>まだ申請を完了していない場合は、ステップ 4 に戻って以下の手順に従ってください：<ol style="margin:8px 0 0 16px;"><li><a href="https://aka.ms/copilot/vendors" target="_blank" rel="noopener">aka.ms/copilot/vendors</a> の指示に従ってください</li><li><strong>Request Membership</strong>（メンバーシップの申請）——マネージャーの承認が必要です。Core Identity に移動するため、VPN が有効になっていることを確認してください</li><li>承認が得られるまで後続のステップに<strong>進むことはできません</strong></li></ol></span></div>
+<div class="info-box info"><span class="info-box-icon">📋</span><span class="info-box-text">
+<strong>その他の企業の EMU ユーザーの方——Copilot がまだ有効になっていない場合：</strong><br>
+IT 管理者に連絡して、次のように伝えてください：<br>
+「Copilot CLI を使用するために、GitHub EMU アカウントで GitHub Copilot を有効にする必要があります。」
+</span></div>
+<p>管理者が有効化した後、ログイン時に自動的に Copilot へのアクセスが得られます。</p>`,
       },
     },
   },
@@ -364,10 +501,11 @@ Contact your IT admin and let them know:<br>
   // ── Step 5: Authentication ──
   {
     id: 'auth',
-    title:       { zh: '登录认证', en: 'Log In' },
+    title:       { zh: '登录认证', en: 'Log In', ja: 'ログイン認証' },
     description: {
       zh: '<p>现在让我们登录你的 GitHub 账号，让 Copilot CLI 知道"你是谁"。</p>',
       en: '<p>Now let\'s log into your GitHub account so Copilot CLI knows who you are.</p>',
+      ja: '<p>それでは GitHub アカウントにログインして、Copilot CLI にあなたが誰であるかを認識させましょう。</p>',
     },
     content: {
       all: {
@@ -395,21 +533,35 @@ Contact your IT admin and let them know:<br>
   <li>Authorize Copilot CLI access</li>
 </ol>
 <div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">If the browser doesn't open automatically, visit <a href="https://github.com/login/device" target="_blank" rel="noopener">github.com/login/device</a> and enter the code manually.</span></div>`,
+        ja: `<h3>起動してログイン</h3>
+<p><strong>PowerShell</strong>（Windows の場合）またはターミナル（macOS/Linux の場合）を開いて、以下を実行してください：</p>
+<div class="command-block"><code>copilot</code><button class="btn-copy" data-cmd="copilot"></button></div>
+<p>Copilot CLI が起動したら、ログインコマンドを入力してください：</p>
+<div class="command-block"><code>/login</code><button class="btn-copy" data-cmd="/login"></button></div>
+<p>システムが<strong>デバイス認証コード</strong>を表示し、ブラウザを自動的に開きます。<strong>ブラウザが表示されるまで数秒かかる場合がありますので、しばらくお待ちください。</strong>ブラウザの指示に従ってください：</p>
+<ol>
+  <li>ターミナルに表示された認証コードを入力します</li>
+  <li>GitHub アカウントでログインします</li>
+  <li>Copilot CLI へのアクセスを承認します</li>
+</ol>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">ブラウザが自動的に開かない場合は、<a href="https://github.com/login/device" target="_blank" rel="noopener">github.com/login/device</a> に手動でアクセスして認証コードを入力してください。</span></div>`,
       },
     },
     contentEmu: {
       zh: `<div class="info-box warning"><span class="info-box-icon">🏢</span><span class="info-box-text">使用 EMU 账号登录时，浏览器可能会跳转到你公司的 SSO 登录页面，这是正常的。使用你的公司凭据登录即可。</span></div>`,
       en: `<div class="info-box warning"><span class="info-box-icon">🏢</span><span class="info-box-text">When logging in with an EMU account, the browser may redirect to your company's SSO login page — this is normal. Log in with your company credentials.</span></div>`,
+      ja: `<div class="info-box warning"><span class="info-box-icon">🏢</span><span class="info-box-text">EMU アカウントでログインする際、ブラウザが会社の SSO ログインページにリダイレクトされることがあります——これは正常です。会社の認証情報でログインしてください。</span></div>`,
     },
   },
 
   // ── Step 6: Verify Installation ──
   {
     id: 'verify',
-    title:       { zh: '验证安装', en: 'Verify Installation' },
+    title:       { zh: '验证安装', en: 'Verify Installation', ja: 'インストールの確認' },
     description: {
       zh: '<p>让我们确认 Copilot CLI 已经正确安装并且能正常工作。</p>',
       en: '<p>Let\'s make sure Copilot CLI is correctly installed and working.</p>',
+      ja: '<p>Copilot CLI が正しくインストールされ、正常に動作しているか確認しましょう。</p>',
     },
     content: {
       all: {
@@ -429,6 +581,14 @@ Contact your IT admin and let them know:<br>
 <div class="info-box success"><span class="info-box-icon">✅</span><span class="info-box-text">See a version number? Great — Copilot CLI is successfully installed on your machine!</span></div>
 
 <div class="info-box danger"><span class="info-box-icon">❌</span><span class="info-box-text">If you see "command not found" or an error, try:<br>1. Close the terminal and open a new one<br>2. Run <code>copilot --version</code> again<br>3. If it still doesn't work, go back to step 2 and reinstall</span></div>`,
+        ja: `<h3>バージョンを確認する</h3>
+<p><strong>PowerShell</strong>（Windows の場合）またはターミナル（macOS/Linux の場合）で以下を実行してください：</p>
+<div class="command-block"><code>copilot --version</code><button class="btn-copy" data-cmd="copilot --version"></button></div>
+<p>バージョン番号（例：<code>1.x.x</code>）が表示されれば、インストール成功です！</p>
+
+<div class="info-box success"><span class="info-box-icon">✅</span><span class="info-box-text">バージョン番号が表示されましたか？おめでとうございます——Copilot CLI は正常にインストールされています！</span></div>
+
+<div class="info-box danger"><span class="info-box-icon">❌</span><span class="info-box-text">「コマンドが見つかりません」やエラーが表示された場合は、以下を試してください：<br>1. ターミナルを閉じて新しいターミナルを開く<br>2. もう一度 <code>copilot --version</code> を実行する<br>3. それでもうまくいかない場合は、ステップ 2 に戻って再インストールしてください</span></div>`,
       },
     },
   },
@@ -436,11 +596,12 @@ Contact your IT admin and let them know:<br>
   // ── Step 7: First Launch Experience (Optional) ──
   {
     id: 'first-launch',
-    title:    { zh: '🚀 首次启动体验', en: '🚀 First Launch Experience' },
+    title:    { zh: '🚀 首次启动体验', en: '🚀 First Launch Experience', ja: '🚀 初回起動体験' },
     optional: true,
     description: {
       zh: '<p>恭喜你走到了这一步！现在让我们一起启动 Copilot CLI，体验你的第一次 AI 对话。</p>',
       en: '<p>Congrats on making it this far! Let\'s launch Copilot CLI together and try your first AI conversation.</p>',
+      ja: '<p>ここまでお疲れさまでした！それでは Copilot CLI を起動して、初めての AI 対話を体験しましょう。</p>',
     },
     content: {
       all: {
@@ -450,33 +611,40 @@ Contact your IT admin and let them know:<br>
         en: `<p>Open <strong>PowerShell</strong> (Windows) or your terminal (macOS/Linux), and run:</p>
 <div class="command-block"><code>copilot</code><button class="btn-copy" data-cmd="copilot"></button></div>
 <p>On your first launch, you may encounter the following steps:</p>`,
+        ja: `<p><strong>PowerShell</strong>（Windows の場合）またはターミナル（macOS/Linux の場合）を開いて、以下を実行してください：</p>
+<div class="command-block"><code>copilot</code><button class="btn-copy" data-cmd="copilot"></button></div>
+<p>初回起動時には、以下のステップが表示されることがあります：</p>`,
       },
     },
     substeps: [
       {
-        title: { zh: '使用条款和隐私协议', en: 'Terms of Use & Privacy Agreement' },
+        title: { zh: '使用条款和隐私协议', en: 'Terms of Use & Privacy Agreement', ja: '利用規約とプライバシーに関する同意' },
         body: {
           zh: '<p>系统可能会显示使用条款，询问你是否同意。输入 <code>y</code> 或选择"同意"即可。</p>',
           en: '<p>You may see terms of use and be asked to accept them. Type <code>y</code> or select "Accept".</p>',
+          ja: '<p>利用規約が表示され、同意を求められることがあります。<code>y</code> と入力するか、「同意する」を選択してください。</p>',
         },
         why: {
           zh: '这是合规要求。GitHub 需要确认你了解 Copilot 如何使用数据、AI 生成内容的限制等。这些条款保护你的权益。',
           en: 'This is a compliance requirement. GitHub needs to confirm you understand how Copilot uses data and the limitations of AI-generated content. These terms protect your rights.',
+          ja: 'これはコンプライアンス要件です。GitHub は、Copilot がデータをどのように使用するか、AI 生成コンテンツの制限事項などをユーザーが理解していることを確認する必要があります。これらの規約はあなたの権利を保護します。',
         },
       },
       {
-        title: { zh: '账号认证确认', en: 'Account Authentication' },
+        title: { zh: '账号认证确认', en: 'Account Authentication', ja: 'アカウント認証の確認' },
         body: {
           zh: '<p>如果你在步骤 5 已经登录，这里会显示你的用户名并确认已登录。如果还没登录，系统会再次引导你完成 <code>/login</code> 流程。</p>',
           en: '<p>If you logged in during step 5, it will show your username and confirm you\'re authenticated. Otherwise, it will guide you through the <code>/login</code> flow again.</p>',
+          ja: '<p>ステップ 5 でログイン済みの場合、ユーザー名が表示され認証済みであることが確認されます。まだログインしていない場合は、再度 <code>/login</code> フローが案内されます。</p>',
         },
         why: {
           zh: 'Copilot CLI 需要验证你的 GitHub 身份，以确认你有权使用 Copilot 服务。每次启动都会检查认证状态。',
           en: 'Copilot CLI needs to verify your GitHub identity to confirm you have access to the Copilot service. It checks your auth status on each launch.',
+          ja: 'Copilot CLI は GitHub の ID を検証し、Copilot サービスへのアクセス権があることを確認する必要があります。起動するたびに認証状態がチェックされます。',
         },
       },
       {
-        title: { zh: '了解 Copilot CLI 的目录结构', en: 'Copilot CLI Directory Structure' },
+        title: { zh: '了解 Copilot CLI 的目录结构', en: 'Copilot CLI Directory Structure', ja: 'Copilot CLI のディレクトリ構造を知ろう' },
         body: {
           zh: `<p>首次启动后，Copilot CLI 会在你的用户目录下自动创建一个 <code>~/.copilot/</code> 文件夹（Windows 上是 <code>%USERPROFILE%\\.copilot\\</code>）。这个文件夹存放了 Copilot 运行所需的所有数据：</p>
 <table style="width:100%;border-collapse:collapse;margin:12px 0;font-size:.9rem">
@@ -500,25 +668,39 @@ Contact your IT admin and let them know:<br>
 <tr><td style="padding:8px;border:1px solid var(--c-border)"><code>mcp-config.json</code></td><td style="padding:8px;border:1px solid var(--c-border)">MCP server configuration (advanced feature, beginners can ignore)</td><td style="padding:8px;border:1px solid var(--c-border)">Only when MCP is configured</td></tr>
 </table>
 <div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>Note:</strong> These directories <strong>don't all appear at once</strong>. Some are created during installation, while others only appear after your first launch or when you use specific features. If you open the <code>.copilot</code> folder now and it doesn't match this table exactly, that's perfectly normal — they'll appear gradually as you use Copilot.<br><br>You don't need to modify these directories — they're managed automatically. If you ever need to troubleshoot, the <code>logs/</code> folder is where to look.</span></div>`,
+          ja: `<p>初回起動後、Copilot CLI はホームディレクトリに <code>~/.copilot/</code> フォルダを自動的に作成します（Windows の場合：<code>%USERPROFILE%\\.copilot\\</code>）。このフォルダには Copilot の実行に必要なすべてのデータが保存されます：</p>
+<table style="width:100%;border-collapse:collapse;margin:12px 0;font-size:.9rem">
+<tr style="background:var(--c-primary-bg)"><th style="text-align:left;padding:8px;border:1px solid var(--c-border)">📁 ディレクトリ</th><th style="text-align:left;padding:8px;border:1px solid var(--c-border)">用途</th><th style="text-align:left;padding:8px;border:1px solid var(--c-border)">作成されるタイミング</th></tr>
+<tr><td style="padding:8px;border:1px solid var(--c-border)"><code>session-state/</code></td><td style="padding:8px;border:1px solid var(--c-border)">各対話のセッションデータ（プラン、チェックポイント、コンテキストメモリ）</td><td style="padding:8px;border:1px solid var(--c-border)">最初の対話後</td></tr>
+<tr><td style="padding:8px;border:1px solid var(--c-border)"><code>logs/</code></td><td style="padding:8px;border:1px solid var(--c-border)">実行ログ——問題が発生した際のトラブルシューティングに役立ちます</td><td style="padding:8px;border:1px solid var(--c-border)">初回起動後</td></tr>
+<tr><td style="padding:8px;border:1px solid var(--c-border)"><code>pkg/</code></td><td style="padding:8px;border:1px solid var(--c-border)">Copilot CLI のパッケージファイル</td><td style="padding:8px;border:1px solid var(--c-border)">インストール時</td></tr>
+<tr><td style="padding:8px;border:1px solid var(--c-border)"><code>tmp/</code></td><td style="padding:8px;border:1px solid var(--c-border)">一時ファイル、無視しても問題ありません</td><td style="padding:8px;border:1px solid var(--c-border)">必要に応じて作成</td></tr>
+<tr><td style="padding:8px;border:1px solid var(--c-border)"><code>win32-x64/</code> など</td><td style="padding:8px;border:1px solid var(--c-border)">お使いの OS に対応したプラットフォーム固有のファイル</td><td style="padding:8px;border:1px solid var(--c-border)">インストール時</td></tr>
+<tr><td style="padding:8px;border:1px solid var(--c-border)"><code>mcp-config.json</code></td><td style="padding:8px;border:1px solid var(--c-border)">MCP サーバー設定ファイル（上級者向け機能、初心者は無視して大丈夫です）</td><td style="padding:8px;border:1px solid var(--c-border)">MCP を設定した時のみ</td></tr>
+</table>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>注意：</strong>これらのディレクトリは<strong>一度にすべて作成されるわけではありません</strong>。インストール時に作成されるものもあれば、初回起動後や特定の機能を使用した時に初めて作成されるものもあります。今 <code>.copilot</code> フォルダを開いてこの表と完全に一致しなくても、まったく正常です——Copilot を使っていくうちに徐々に作成されます。<br><br>これらのディレクトリを手動で変更する必要はありません——自動的に管理されます。トラブルシューティングが必要な場合は、<code>logs/</code> フォルダを確認してください。</span></div>`,
         },
         why: {
           zh: '了解工具的数据存放位置是一个好习惯。当你需要清理磁盘空间、备份配置、或排查问题时，知道这些目录的作用会非常有帮助。',
           en: 'Knowing where a tool stores its data is good practice. It helps when you need to free disk space, back up settings, or troubleshoot issues.',
+          ja: 'ツールがデータをどこに保存しているか知っておくことは良い習慣です。ディスク容量の確保、設定のバックアップ、問題のトラブルシューティングの際に役立ちます。',
         },
       },
       {
-        title: { zh: '进入交互界面', en: 'Enter the Interactive Interface' },
+        title: { zh: '进入交互界面', en: 'Enter the Interactive Interface', ja: 'インタラクティブ画面に入る' },
         body: {
           zh: '<p>成功启动后，你会看到一个类似聊天窗口的界面。光标停在输入行，等待你输入指令。</p>',
           en: '<p>Once launched, you\'ll see a chat-like interface. The cursor will be waiting for your input on a command line.</p>',
+          ja: '<p>起動に成功すると、チャットのような画面が表示されます。カーソルが入力行で待機し、コマンドの入力を待っています。</p>',
         },
         why: {
           zh: 'Copilot CLI 是一个"对话式"工具——你用自然语言告诉它你想做什么，它会帮你生成代码、命令或解答。',
           en: 'Copilot CLI is a conversational tool — you tell it what you want in natural language, and it generates code, commands, or explanations for you.',
+          ja: 'Copilot CLI は「対話型」ツールです——やりたいことを自然言語で伝えると、コード、コマンド、または説明を生成してくれます。',
         },
       },
       {
-        title: { zh: '试试你的第一条指令', en: 'Try Your First Command' },
+        title: { zh: '试试你的第一条指令', en: 'Try Your First Command', ja: '最初のコマンドを試してみよう' },
         body: {
           zh: `<p>试着输入一条简单的指令，例如：</p>
 <div class="command-block"><code>list files in current directory</code><button class="btn-copy" data-cmd="list files in current directory"></button></div>
@@ -528,27 +710,34 @@ Contact your IT admin and let them know:<br>
 <div class="command-block"><code>list files in current directory</code><button class="btn-copy" data-cmd="list files in current directory"></button></div>
 <p>Copilot will understand your intent and generate the appropriate terminal command.</p>
 <div class="info-box success"><span class="info-box-icon">🎉</span><span class="info-box-text">If you see a file listing — congratulations, you've successfully used Copilot CLI!</span></div>`,
+          ja: `<p>簡単な指示を入力してみてください。例えば：</p>
+<div class="command-block"><code>list files in current directory</code><button class="btn-copy" data-cmd="list files in current directory"></button></div>
+<p>Copilot があなたの意図を理解し、適切なターミナルコマンドを生成してくれます。</p>
+<div class="info-box success"><span class="info-box-icon">🎉</span><span class="info-box-text">ファイル一覧が表示されましたか？おめでとうございます、Copilot CLI を正常に使用できました！</span></div>`,
         },
         why: {
           zh: '这验证了整个链路都在正常工作：CLI 工具 → GitHub 认证 → AI 模型 → 结果返回。',
           en: 'This verifies the entire pipeline is working: CLI tool → GitHub auth → AI model → results returned.',
+          ja: 'これはパイプライン全体が正常に動作していることを確認します：CLI ツール → GitHub 認証 → AI モデル → 結果の返却。',
         },
       },
     ],
     exitHint: {
       zh: '<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">想退出 Copilot CLI？输入 <code>/exit</code> 或按 <code>Ctrl+C</code> 即可。</span></div>',
       en: '<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">Want to exit Copilot CLI? Type <code>/exit</code> or press <code>Ctrl+C</code>.</span></div>',
+      ja: '<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">Copilot CLI を終了するには、<code>/exit</code> と入力するか <code>Ctrl+C</code> を押してください。</span></div>',
     },
   },
 
   // ── Step 9: Common Commands (Optional) ──
   {
     id: 'commands',
-    title:    { zh: '📖 常用命令速查', en: '📖 Common Commands' },
+    title:    { zh: '📖 常用命令速查', en: '📖 Common Commands', ja: '📖 よく使うコマンド一覧' },
     optional: true,
     description: {
       zh: '<p>掌握这些常用命令和技巧，能让你更高效地使用 Copilot CLI。</p>',
       en: '<p>Learn these common commands and tips to get the most out of Copilot CLI.</p>',
+      ja: '<p>よく使うコマンドやコツを覚えて、Copilot CLI をもっと活用しましょう。</p>',
     },
     content: {
       all: {
@@ -612,6 +801,36 @@ Contact your IT admin and let them know:<br>
   <li>🔄 <strong>Follow up</strong>: If the result isn't quite right, keep chatting to refine it</li>
   <li>🌍 <strong>Any language works</strong>: Use whatever language you're most comfortable with</li>
 </ul>`,
+        ja: `<h3>対話方式</h3>
+<p>Copilot CLI の最も重要な機能は<strong>自然言語での対話</strong>です。人に話しかけるように質問できます：</p>
+<div class="command-block"><code>カレントディレクトリで最も大きい5つのファイルを見つけて</code><button class="btn-copy" data-cmd="カレントディレクトリで最も大きい5つのファイルを見つけて"></button></div>
+<div class="command-block"><code>すべての .txt ファイルを1つにまとめる Python スクリプトを書いて</code><button class="btn-copy" data-cmd="すべての .txt ファイルを1つにまとめる Python スクリプトを書いて"></button></div>
+<div class="command-block"><code>git rebase と git merge の違いを説明して</code><button class="btn-copy" data-cmd="git rebase と git merge の違いを説明して"></button></div>
+
+<h3>組み込みコマンド（/ で始まるもの）</h3>
+<table style="width:100%;border-collapse:collapse;margin:12px 0;">
+  <tr style="background:var(--c-bg);"><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">コマンド</th><th style="padding:8px 12px;text-align:left;border:1px solid var(--c-border);">機能</th></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/help</td><td style="padding:8px 12px;border:1px solid var(--c-border);">利用可能なコマンド一覧を表示——コマンドを忘れた時の万能入口</td></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/clear</td><td style="padding:8px 12px;border:1px solid var(--c-border);">会話履歴をクリアして新しい会話を開始</td></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/model</td><td style="padding:8px 12px;border:1px solid var(--c-border);">AI モデルの切り替え（GPT、Claude など）——モデルによって得意分野が異なります</td></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/compact</td><td style="padding:8px 12px;border:1px solid var(--c-border);">会話履歴を圧縮してコンテキスト容量を節約、長い会話に便利</td></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/usage</td><td style="padding:8px 12px;border:1px solid var(--c-border);">現在のセッションの使用統計を表示（リクエスト数、トークン消費量など）</td></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/context</td><td style="padding:8px 12px;border:1px solid var(--c-border);">Copilot が現在「見える」ファイルや情報を確認</td></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/sessions</td><td style="padding:8px 12px;border:1px solid var(--c-border);">セッション情報を表示（開始時刻、変更されたファイルなど）</td></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/resume</td><td style="padding:8px 12px;border:1px solid var(--c-border);">以前の会話を再開——中断しても最初からやり直す必要なし</td></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/login</td><td style="padding:8px 12px;border:1px solid var(--c-border);">GitHub アカウントにログイン</td></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/logout</td><td style="padding:8px 12px;border:1px solid var(--c-border);">現在のアカウントからログアウト（アカウント切替時に使用）</td></tr>
+  <tr><td style="padding:8px 12px;border:1px solid var(--c-border);font-family:monospace;">/exit</td><td style="padding:8px 12px;border:1px solid var(--c-border);">Copilot CLI を終了して通常のターミナルに戻る</td></tr>
+</table>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">覚えられなくても大丈夫！いつでも <code>/help</code> と入力すれば全コマンドの一覧が表示されます。</span></div>
+
+<h3>より良い結果を得るためのコツ</h3>
+<ul>
+  <li>💬 <strong>具体的に指示する</strong>：「サーバーを作って」より「ポート 3000 でリッスンする Node.js HTTP サーバーを作って」の方が効果的です</li>
+  <li>📁 <strong>プロジェクトディレクトリから起動する</strong>：Copilot がプロジェクトファイルを読み取り、コンテキストを理解できます</li>
+  <li>🔄 <strong>追加で質問できます</strong>：結果が満足いかなければ、会話を続けて改善を依頼しましょう</li>
+  <li>🌍 <strong>どの言語でも OK</strong>：最も使いやすい言語でお使いください</li>
+</ul>`,
       },
     },
   },
@@ -619,11 +838,12 @@ Contact your IT admin and let them know:<br>
   // ── Step 10: Fun Project (Optional) ──
   {
     id: 'fun-project',
-    title:    { zh: '🎮 动手做个小游戏', en: '🎮 Build a Fun Mini Game' },
+    title:    { zh: '🎮 动手做个小游戏', en: '🎮 Build a Fun Mini Game', ja: '🎮 ミニゲームを作ってみよう' },
     optional: true,
     description: {
       zh: '<p>学以致用！让我们用 Copilot CLI 在几分钟内创建一个好玩的浏览器小游戏，体验 AI 编程的魔力。</p>',
       en: '<p>Let\'s put it to work! Use Copilot CLI to create a fun browser game in just a few minutes and experience the magic of AI-powered coding.</p>',
+      ja: '<p>実践あるのみ！Copilot CLI を使って、数分でブラウザゲームを作り、AI プログラミングの魔法を体験しましょう。</p>',
     },
     content: {
       all: {
@@ -713,6 +933,49 @@ Contact your IT admin and let them know:<br>
   <li><strong>"Turn it into a whack-a-mole game"</strong> — see if Copilot can rebuild it from scratch!</li>
 </ul>
 <p><strong>Why do this?</strong> Real software development is an iterative process of continuous improvement. With Copilot, you just describe the changes you want in words, and AI handles the code.</p>`,
+        ja: `<h3>🎯 目標：反応速度テストゲームを作る</h3>
+<p>画面がランダムなタイミングで緑色に変わるウェブゲームを作ります。できるだけ早くクリックすると、反応速度が表示されます！</p>
+
+<h3>ステップ 1：PowerShell を開く</h3>
+<p>Windows のスタートメニューをクリックし、<strong>PowerShell</strong> を検索して、<strong>PowerShell 7</strong>（ある場合）または <strong>Windows PowerShell</strong> を開きます。</p>
+<div class="info-box warning"><span class="info-box-icon">⚠️</span><span class="info-box-text"><strong>重要：「コマンドプロンプト」（CMD）は使用しないでください。</strong>以下のコマンドは CMD では正常に動作しない場合があります。開いたウィンドウのタイトルバーに「PowerShell」と表示されている（青いアイコン）ことを確認してください。</span></div>
+<p><strong>なぜ PowerShell？</strong>PowerShell は Microsoft の最新のコマンドラインツールで、より多くの機能とわかりやすいコマンド形式をサポートしています。Windows に付属の「コマンドプロンプト」（CMD）は前世紀のレガシーツールであり、多くの最新コマンドに対応していません。</p>
+
+<h3>ステップ 2：プロジェクトフォルダを作成する</h3>
+<p>デスクトップにゲームファイルを整理するためのフォルダを作りましょう。以下のコマンドを PowerShell に<strong>1行ずつ</strong>コピーして実行してください：</p>
+<div class="command-block"><code>mkdir ~/Desktop/my-game</code><button class="btn-copy" data-cmd="mkdir ~/Desktop/my-game"></button></div>
+<p><strong>これは何をするの？</strong> <code>mkdir</code> は「make directory」の略で、新しいフォルダを作成します。デスクトップに <code>my-game</code> というフォルダが作成されます。</p>
+<div class="command-block"><code>cd ~/Desktop/my-game</code><button class="btn-copy" data-cmd="cd ~/Desktop/my-game"></button></div>
+<p><strong>これは何をするの？</strong> <code>cd</code> は「change directory」の略で、フォルダに移動します。ターミナルの作業場所が今作成したフォルダに切り替わりました。</p>
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text"><strong>なぜ新しいフォルダを作るの？</strong>デスクトップに何もかも置かないのと同じように、各プロジェクトには専用のフォルダがあるべきです。ファイルが整理され、後で見つけやすくなります。</span></div>
+
+<h3>ステップ 3：このフォルダで Copilot CLI を起動する</h3>
+<div class="command-block"><code>copilot</code><button class="btn-copy" data-cmd="copilot"></button></div>
+<p><strong>なぜプロジェクトフォルダから起動するの？</strong>Copilot が生成したファイルは現在のフォルダに保存されるからです。<code>my-game</code> フォルダから起動すれば、生成されたファイルはすべてそこにきれいに保存されます。</p>
+
+<h3>ステップ 4：Copilot にやりたいことを伝える</h3>
+<p>Copilot の対話画面で以下を入力してください（コピーして貼り付けて OK です）：</p>
+<div class="command-block"><code>Create an HTML file called game.html with a reaction speed test game: the page starts with a blue background showing "Wait...", then after a random 2-5 seconds turns green showing "Click!", the user clicks and sees their reaction time in milliseconds, with an option to try again. Make it look great with animations and mobile-friendly. All code in a single HTML file.</code><button class="btn-copy" data-cmd='Create an HTML file called game.html with a reaction speed test game: the page starts with a blue background showing "Wait...", then after a random 2-5 seconds turns green showing "Click!", the user clicks and sees their reaction time in milliseconds, with an option to try again. Make it look great with animations and mobile-friendly. All code in a single HTML file.'></button></div>
+<p><strong>これは何をするの？</strong>やりたいことを AI に自然言語で伝えています。Copilot があなたの意図を理解し、完全なゲームコードを書いて、<code>game.html</code> として保存します。全体の処理はわずか数秒です！</p>
+
+<h3>ステップ 5：ゲームを開く</h3>
+<p>まず Copilot CLI を終了してから、ブラウザでゲームを開きます：</p>
+<div class="command-block"><code>/exit</code><button class="btn-copy" data-cmd="/exit"></button></div>
+<p><strong>これは何をするの？</strong>Copilot の対話モードを終了し、通常のターミナルに戻ります。これでシステムコマンドを実行できます。</p>
+<div class="command-block"><code>start game.html</code><button class="btn-copy" data-cmd="start game.html"></button></div>
+<p><strong>これは何をするの？</strong> <code>start</code> コマンドはデフォルトのブラウザでファイルを開きます。（macOS では <code>open game.html</code>、Linux では <code>xdg-open game.html</code> を使用してください）</p>
+
+<div class="info-box success"><span class="info-box-icon">🎉</span><span class="info-box-text"><strong>おめでとうございます！</strong>AI を使って数分で完全なブラウザゲームを作成しました！あなたの反応速度はどれくらいでしょうか？<br><br>デスクトップの <code>my-game</code> フォルダにある <code>game.html</code> ファイルをダブルクリックすれば、いつでもまた遊べます。</span></div>
+
+<h3>🚀 もっと続けたい？これらの改善を試してみよう</h3>
+<p>もう一度 <code>copilot</code> を実行して新しい対話を開始し、変更を依頼してみましょう——反復開発を体験してください：</p>
+<ul>
+  <li><strong>「直近5回の結果を表示するスコアボードを追加して」</strong></li>
+  <li><strong>「難易度選択を追加して：簡単、普通、難しい」</strong></li>
+  <li><strong>「効果音を追加して」</strong></li>
+  <li><strong>「もぐらたたきゲームに作り変えて」</strong>——Copilot がゼロから作り直せるか見てみましょう！</li>
+</ul>
+<p><strong>なぜこれをするの？</strong>実際のソフトウェア開発は、継続的に改善を重ねる反復プロセスです。Copilot を使えば、望む変更を言葉で説明するだけで、AI がコードを処理してくれます。</p>`,
       },
     },
   },
@@ -776,5 +1039,34 @@ const CONGRATS_CONTENT = {
 <ul>
   <li><a href="https://docs.github.com/copilot" target="_blank" rel="noopener">📚 GitHub Copilot official documentation</a></li>
   <li><a href="https://github.blog/ai-and-ml/github-copilot-cli-101-how-to-use-github-copilot-from-the-command-line/" target="_blank" rel="noopener">📖 Copilot CLI 101 blog post</a></li>
+</ul>`,
+
+  ja: `<h3>達成したこと</h3>
+<ul>
+  <li>✅ ターミナルを開いた</li>
+  <li>✅ Copilot CLI をインストールした</li>
+  <li>✅ GitHub アカウントにログインした</li>
+  <li>✅ 最初の AI コマンドを実行した</li>
+</ul>
+
+<h3>コマンドクイックリファレンス</h3>
+<div class="command-block"><code>copilot</code><button class="btn-copy" data-cmd="copilot"></button></div>
+<p>Copilot CLI のインタラクティブ画面を起動します。</p>
+
+<div class="command-block"><code>copilot "Python HTTP サーバーを作成して"</code><button class="btn-copy" data-cmd='copilot "Python HTTP サーバーを作成して"'></button></div>
+<p>インタラクティブモードに入らずに直接質問できます。</p>
+
+<h3>便利なヒント</h3>
+<ul>
+  <li>💬 Copilot には<strong>どの言語でも</strong>話しかけられます</li>
+  <li>📁 プロジェクトディレクトリ内で Copilot を起動すると、プロジェクトの文脈を理解してくれます</li>
+  <li>🔄 <code>/clear</code> で会話履歴をクリアできます</li>
+  <li>❓ <code>/help</code> で利用可能なコマンド一覧を確認できます</li>
+</ul>
+
+<h3>さらに学ぶためのリソース</h3>
+<ul>
+  <li><a href="https://docs.github.com/copilot" target="_blank" rel="noopener">📚 GitHub Copilot 公式ドキュメント</a></li>
+  <li><a href="https://github.blog/ai-and-ml/github-copilot-cli-101-how-to-use-github-copilot-from-the-command-line/" target="_blank" rel="noopener">📖 Copilot CLI 101 ブログ記事</a></li>
 </ul>`,
 };

@@ -77,6 +77,41 @@ const I18n = (() => {
       'step.substep': 'Sub-step',
       'why': 'Why?',
     },
+    ja: {
+      'app.title': 'GitHub Copilot CLI セットアップガイド',
+      'app.subtitle': 'ゼロから始める AI コーディングアシスタント',
+      'welcome.select.os': 'お使いの OS を選択してください',
+      'welcome.select.lang': '言語 / Language',
+      'welcome.start': 'セットアップ開始',
+      'welcome.intro': 'GitHub Copilot CLI は GitHub が提供するコマンドライン AI アシスタントです。ターミナルで自然言語を使って、コードの記述、コマンドの検索、問題のデバッグなど、さまざまな開発タスクをこなせます。このガイドでは、インストール手順をステップごとに説明します。',
+      'nav.step': 'ステップ',
+      'btn.prev': '前へ',
+      'btn.next': '次へ',
+      'btn.done': '✅ このステップを完了しました',
+      'btn.skip': 'スキップ',
+      'btn.copy': 'コピー',
+      'btn.copied': 'コピーしました！',
+      'btn.reset': '最初からやり直す',
+      'btn.tryit': '🚀 今すぐ試す',
+      'faq.title': '💡 よくある質問',
+      'faq.empty': 'このステップに関するよくある質問はありません',
+      'verify.success': '✅ このステップは完了です',
+      'verify.fail': '❌ まだうまくいっていないようです。上記の手順を確認してください',
+      'os.windows': 'Windows',
+      'os.macos': 'macOS',
+      'os.linux': 'Linux',
+      'account.type.title': 'どのタイプの GitHub アカウントを使用していますか？',
+      'account.type.personal': '🙋 個人アカウント',
+      'account.type.personal.desc': '自分で登録した GitHub アカウント',
+      'account.type.emu': '🏢 企業 EMU アカウント',
+      'account.type.emu.desc': '企業が一括管理するアカウント（ユーザー名に会社の接尾辞が付く場合が多い。例：name_company）',
+      'congrats.title': '🎉 おめでとうございます！',
+      'congrats.subtitle': 'GitHub Copilot CLI のインストールと起動が完了しました！',
+      'congrats.next': '次にできること...',
+      'optional': '（オプション）',
+      'step.substep': 'サブステップ',
+      'why': 'なぜ？',
+    },
   };
 
   function t(keyOrObj) {
@@ -103,6 +138,7 @@ const I18n = (() => {
     return [
       { code: 'zh', label: '中文' },
       { code: 'en', label: 'English' },
+      { code: 'ja', label: '日本語' },
     ];
   }
 
