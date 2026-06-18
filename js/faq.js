@@ -80,6 +80,22 @@ const FAQS = {
         ja: '考えられる原因：<ul><li><strong>ネットワークの問題</strong>：github.com にアクセスできることを確認してください。企業ネットワークの場合、プロキシの設定が必要な場合があります</li><li><strong>権限不足</strong>：管理者としてターミナルを実行してみてください（PowerShell を右クリック→「管理者として実行」）</li><li><strong>ウイルス対策ソフトによるブロック</strong>：ウイルス対策ソフトがインストールをブロックしている場合があります。一時的に無効にしてお試しください</li></ul>',
       },
     },
+    {
+      q: { zh: '怎么把 Copilot CLI 更新到最新版？', en: 'How do I update Copilot CLI to the latest version?', ja: 'Copilot CLI を最新版に更新するには？' },
+      a: {
+        zh: '更新方法和你当初的安装方式一致，重新运行一次安装/升级命令即可：<ul><li><strong>winget</strong>：<code>winget upgrade GitHub.Copilot</code></li><li><strong>Homebrew（macOS/Linux）</strong>：<code>brew upgrade copilot-cli</code></li><li><strong>npm</strong>：<code>npm install -g @github/copilot</code></li><li><strong>安装脚本（macOS/Linux）</strong>：重新运行 <code>curl -fsSL https://gh.io/copilot-install | bash</code></li></ul>更新后用 <code>copilot --version</code> 确认版本号变了。想抢先体验新功能，可以安装预览版（命令里加 <code>@prerelease</code>，或 winget 用 <code>GitHub.Copilot.Prerelease</code>）。',
+        en: 'Update the same way you installed — just run the install/upgrade command again:<ul><li><strong>winget</strong>: <code>winget upgrade GitHub.Copilot</code></li><li><strong>Homebrew (macOS/Linux)</strong>: <code>brew upgrade copilot-cli</code></li><li><strong>npm</strong>: <code>npm install -g @github/copilot</code></li><li><strong>Install script (macOS/Linux)</strong>: re-run <code>curl -fsSL https://gh.io/copilot-install | bash</code></li></ul>Then run <code>copilot --version</code> to confirm the version changed. To try features early, install the prerelease (add <code>@prerelease</code>, or use <code>GitHub.Copilot.Prerelease</code> with winget).',
+        ja: 'インストールした方法と同じ方法で更新できます。インストール／アップグレードコマンドをもう一度実行するだけです：<ul><li><strong>winget</strong>：<code>winget upgrade GitHub.Copilot</code></li><li><strong>Homebrew（macOS/Linux）</strong>：<code>brew upgrade copilot-cli</code></li><li><strong>npm</strong>：<code>npm install -g @github/copilot</code></li><li><strong>インストールスクリプト（macOS/Linux）</strong>：<code>curl -fsSL https://gh.io/copilot-install | bash</code> を再実行</li></ul>更新後、<code>copilot --version</code> でバージョンが変わったか確認してください。新機能をいち早く試すには、プレビュー版をインストールできます（コマンドに <code>@prerelease</code> を付けるか、winget で <code>GitHub.Copilot.Prerelease</code> を使用）。',
+      },
+    },
+    {
+      q: { zh: 'npm 安装时报错或卡住怎么办？', en: 'npm install throws an error or hangs — what do I do?', ja: 'npm インストールでエラーが出る／止まる場合は？' },
+      a: {
+        zh: '先确认 <strong>Node.js 是 22 或更高版本</strong>（运行 <code>node --version</code>），版本太低是最常见的原因。<br><br>如果你在 <code>~/.npmrc</code> 里设置了 <code>ignore-scripts=true</code>，安装会缺少必要的步骤而失败。这种情况下改用这条命令：<br><code>npm_config_ignore_scripts=false npm install -g @github/copilot</code><br><br>如果还是失败，可以改用本平台推荐的包管理器（Windows 用 winget，macOS/Linux 用 Homebrew 或安装脚本）。',
+        en: 'First make sure <strong>Node.js is version 22 or later</strong> (run <code>node --version</code>) — an outdated version is the most common cause.<br><br>If you have <code>ignore-scripts=true</code> in your <code>~/.npmrc</code>, the install will skip required steps and fail. In that case use:<br><code>npm_config_ignore_scripts=false npm install -g @github/copilot</code><br><br>If it still fails, switch to your platform\'s recommended package manager (winget on Windows; Homebrew or the install script on macOS/Linux).',
+        ja: 'まず <strong>Node.js が 22 以上</strong>であることを確認してください（<code>node --version</code> を実行）。バージョンが古いことが最も多い原因です。<br><br><code>~/.npmrc</code> に <code>ignore-scripts=true</code> を設定している場合、必要な手順がスキップされて失敗します。その場合は次のコマンドを使ってください：<br><code>npm_config_ignore_scripts=false npm install -g @github/copilot</code><br><br>それでも失敗する場合は、各プラットフォーム推奨のパッケージマネージャー（Windows は winget、macOS/Linux は Homebrew またはインストールスクリプト）に切り替えてください。',
+      },
+    },
   ],
 
   account: [
@@ -135,6 +151,14 @@ const FAQS = {
         zh: '可能的原因：<ul><li><strong>没有 Copilot 订阅</strong>：确保你已经在步骤 4 开通了 Copilot</li><li><strong>EMU 账号未授权</strong>：联系 IT 管理员开通 Copilot 权限</li><li><strong>网络问题</strong>：确认能正常访问 github.com</li><li><strong>激活码过期</strong>：激活码有时效，如果过期了，重新运行 <code>/login</code></li></ul>',
         en: 'Possible causes:<ul><li><strong>No Copilot subscription</strong>: Make sure you enabled Copilot in step 4</li><li><strong>EMU account not authorized</strong>: Contact your IT admin to enable Copilot</li><li><strong>Network issues</strong>: Verify you can access github.com</li><li><strong>Code expired</strong>: Activation codes expire. Run <code>/login</code> again for a fresh code</li></ul>',
         ja: '考えられる原因：<ul><li><strong>Copilot サブスクリプションがない</strong>：ステップ 4 で Copilot を有効にしたか確認してください</li><li><strong>EMU アカウントが未承認</strong>：IT 管理者に連絡して Copilot を有効にしてもらってください</li><li><strong>ネットワークの問題</strong>：github.com にアクセスできるか確認してください</li><li><strong>コードの期限切れ</strong>：アクティベーションコードには有効期限があります。<code>/login</code> を再度実行して新しいコードを取得してください</li></ul>',
+      },
+    },
+    {
+      q: { zh: '可以不用浏览器、用令牌（token）登录吗？', en: 'Can I authenticate with a token instead of the browser?', ja: 'ブラウザを使わずトークンで認証できますか？' },
+      a: {
+        zh: '可以，这主要用于自动化、CI 或无法打开浏览器的环境。在 <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">细粒度个人访问令牌</a>页面创建一个令牌，<strong>Resource owner 选你的个人账号</strong>，并在 Account 权限里勾选 <strong>Copilot Requests</strong>。然后把令牌设置到环境变量里即可（按优先级 <code>COPILOT_GITHUB_TOKEN</code> &gt; <code>GH_TOKEN</code> &gt; <code>GITHUB_TOKEN</code>）：<br><code>export COPILOT_GITHUB_TOKEN=你的令牌</code>（Windows PowerShell 用 <code>$env:COPILOT_GITHUB_TOKEN="你的令牌"</code>）。<br><br>对于日常使用，直接用 <code>/login</code> 走浏览器登录更简单。',
+        en: 'Yes — this is mainly for automation, CI, or environments where you can\'t open a browser. Create a token on the <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained personal access tokens</a> page, set <strong>Resource owner</strong> to your personal account, and enable the <strong>Copilot Requests</strong> permission under Account. Then set it as an environment variable (precedence: <code>COPILOT_GITHUB_TOKEN</code> &gt; <code>GH_TOKEN</code> &gt; <code>GITHUB_TOKEN</code>):<br><code>export COPILOT_GITHUB_TOKEN=your_token</code> (on Windows PowerShell: <code>$env:COPILOT_GITHUB_TOKEN="your_token"</code>).<br><br>For everyday use, the browser-based <code>/login</code> is simpler.',
+        ja: 'はい——主に自動化や CI、ブラウザを開けない環境向けです。<a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained personal access tokens</a> ページでトークンを作成し、<strong>Resource owner</strong> を個人アカウントに設定して、Account 権限の <strong>Copilot Requests</strong> を有効にします。次に環境変数として設定します（優先順位：<code>COPILOT_GITHUB_TOKEN</code> &gt; <code>GH_TOKEN</code> &gt; <code>GITHUB_TOKEN</code>）：<br><code>export COPILOT_GITHUB_TOKEN=あなたのトークン</code>（Windows PowerShell では <code>$env:COPILOT_GITHUB_TOKEN="あなたのトークン"</code>）。<br><br>日常的な利用では、ブラウザでの <code>/login</code> の方が簡単です。',
       },
     },
   ],

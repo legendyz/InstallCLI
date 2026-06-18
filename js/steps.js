@@ -195,7 +195,9 @@ const STEPS = [
 <h3>备选方式：使用 npm 安装</h3>
 <p>如果你已经安装了 Node.js（需要 <strong>22 或更高版本</strong>），也可以用 npm：</p>
 <div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>
-<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">使用 npm 安装需要 <strong>Node.js 22+</strong>。可以运行 <code>node --version</code> 检查你的版本。如果版本过低，请先到 <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a> 下载最新的 LTS 版本。</span></div>`,
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">使用 npm 安装需要 <strong>Node.js 22+</strong>。可以运行 <code>node --version</code> 检查你的版本。如果版本过低，请先到 <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a> 下载最新的 LTS 版本。</span></div>
+
+<div class="info-box info"><span class="info-box-icon">🔄</span><span class="info-box-text"><strong>更新与预览版：</strong>以后想升级到最新版本，重新运行安装命令即可（winget 也可用 <code>winget upgrade GitHub.Copilot</code>）。想抢先体验新功能，可以安装<strong>预览版（prerelease）</strong>：winget 用 <code>winget install GitHub.Copilot.Prerelease</code>，npm 用 <code>npm install -g @github/copilot@prerelease</code>。</span></div>`,
         en: `<h3>Recommended: Install with winget</h3>
 <p><strong>winget</strong> is Windows' built-in package manager — it lets you install software with a single command.</p>
 <div class="command-block"><code>winget install GitHub.Copilot</code><button class="btn-copy" data-cmd="winget install GitHub.Copilot"></button></div>
@@ -205,7 +207,9 @@ const STEPS = [
 <h3>Alternative: Install with npm</h3>
 <p>If you have Node.js installed (<strong>version 22 or later</strong> required), you can also use npm:</p>
 <div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>
-<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">npm installation requires <strong>Node.js 22+</strong>. Run <code>node --version</code> to check. If your version is too old, download the latest LTS version from <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a>.</span></div>`,
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">npm installation requires <strong>Node.js 22+</strong>. Run <code>node --version</code> to check. If your version is too old, download the latest LTS version from <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a>.</span></div>
+
+<div class="info-box info"><span class="info-box-icon">🔄</span><span class="info-box-text"><strong>Updating &amp; prerelease:</strong> To upgrade to the latest version later, just run the install command again (or <code>winget upgrade GitHub.Copilot</code>). To try new features early, install the <strong>prerelease</strong>: winget <code>winget install GitHub.Copilot.Prerelease</code>, or npm <code>npm install -g @github/copilot@prerelease</code>.</span></div>`,
         ja: `<h3>おすすめ：winget でインストール</h3>
 <p><strong>winget</strong> は Windows に組み込まれているパッケージマネージャーで、コマンド一つでソフトウェアをインストールできます。</p>
 <div class="command-block"><code>winget install GitHub.Copilot</code><button class="btn-copy" data-cmd="winget install GitHub.Copilot"></button></div>
@@ -215,7 +219,9 @@ const STEPS = [
 <h3>代替方法：npm でインストール</h3>
 <p>Node.js がインストール済みの場合（<strong>バージョン 22 以上</strong>が必要）、npm も使えます：</p>
 <div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>
-<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">npm でのインストールには <strong>Node.js 22+</strong> が必要です。<code>node --version</code> でバージョンを確認してください。バージョンが古い場合は、<a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a> から最新の LTS バージョンをダウンロードしてください。</span></div>`,
+<div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">npm でのインストールには <strong>Node.js 22+</strong> が必要です。<code>node --version</code> でバージョンを確認してください。バージョンが古い場合は、<a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a> から最新の LTS バージョンをダウンロードしてください。</span></div>
+
+<div class="info-box info"><span class="info-box-icon">🔄</span><span class="info-box-text"><strong>更新とプレビュー版：</strong>後で最新版に更新するには、インストールコマンドを再実行するだけです（<code>winget upgrade GitHub.Copilot</code> も使えます）。新機能をいち早く試すには、<strong>プレビュー版（prerelease）</strong>をインストールできます：winget は <code>winget install GitHub.Copilot.Prerelease</code>、npm は <code>npm install -g @github/copilot@prerelease</code>。</span></div>`,
       },
       macos: {
         zh: `<h3>推荐方式：使用 Homebrew 安装</h3>
@@ -227,7 +233,9 @@ const STEPS = [
 
 <h3>备选方式：使用 npm 安装</h3>
 <p>如果你已经安装了 Node.js（需要 <strong>22 或更高版本</strong>）：</p>
-<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>`,
+<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>
+
+<div class="info-box info"><span class="info-box-icon">🔄</span><span class="info-box-text"><strong>更新与预览版：</strong>以后想升级到最新版本，运行 <code>brew upgrade copilot-cli</code> 即可。想抢先体验新功能，可以安装<strong>预览版（prerelease）</strong>：Homebrew 用 <code>brew install copilot-cli@prerelease</code>，npm 用 <code>npm install -g @github/copilot@prerelease</code>。</span></div>`,
         en: `<h3>Recommended: Install with Homebrew</h3>
 <p><strong>Homebrew</strong> is the most popular package manager for macOS.</p>
 <p>If you don't have Homebrew yet, install it first:</p>
@@ -237,7 +245,9 @@ const STEPS = [
 
 <h3>Alternative: Install with npm</h3>
 <p>Requires <strong>Node.js 22+</strong>:</p>
-<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>`,
+<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>
+
+<div class="info-box info"><span class="info-box-icon">🔄</span><span class="info-box-text"><strong>Updating &amp; prerelease:</strong> To upgrade later, run <code>brew upgrade copilot-cli</code>. To try new features early, install the <strong>prerelease</strong>: Homebrew <code>brew install copilot-cli@prerelease</code>, or npm <code>npm install -g @github/copilot@prerelease</code>.</span></div>`,
         ja: `<h3>おすすめ：Homebrew でインストール</h3>
 <p><strong>Homebrew</strong> は macOS で最も人気のあるパッケージマネージャーです。</p>
 <p>Homebrew がまだインストールされていない場合は、まずこちらをインストールしてください：</p>
@@ -247,30 +257,50 @@ const STEPS = [
 
 <h3>代替方法：npm でインストール</h3>
 <p><strong>Node.js 22+</strong> が必要です：</p>
-<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>`,
+<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>
+
+<div class="info-box info"><span class="info-box-icon">🔄</span><span class="info-box-text"><strong>更新とプレビュー版：</strong>後で更新するには <code>brew upgrade copilot-cli</code> を実行してください。新機能をいち早く試すには、<strong>プレビュー版（prerelease）</strong>をインストールできます：Homebrew は <code>brew install copilot-cli@prerelease</code>、npm は <code>npm install -g @github/copilot@prerelease</code>。</span></div>`,
       },
       linux: {
         zh: `<h3>推荐方式：使用安装脚本</h3>
 <div class="command-block"><code>curl -fsSL https://gh.io/copilot-install | bash</code><button class="btn-copy" data-cmd="curl -fsSL https://gh.io/copilot-install | bash"></button></div>
 <div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">这行命令会从 GitHub 下载安装脚本并自动执行。如果你更喜欢 wget：<br><code>wget -qO- https://gh.io/copilot-install | bash</code></span></div>
 
-<h3>备选方式：使用 npm 安装</h3>
+<h3>方式二：使用 Homebrew 安装</h3>
+<p>Copilot CLI 现在也支持在 Linux 上通过 <strong>Homebrew</strong> 安装。如果你已经装了 Homebrew：</p>
+<div class="command-block"><code>brew install copilot-cli</code><button class="btn-copy" data-cmd="brew install copilot-cli"></button></div>
+
+<h3>方式三：使用 npm 安装</h3>
 <p>如果你已经安装了 Node.js（需要 <strong>22 或更高版本</strong>）：</p>
-<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>`,
+<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>
+
+<div class="info-box info"><span class="info-box-icon">🔄</span><span class="info-box-text"><strong>更新与预览版：</strong>以后想升级到最新版本，重新运行安装脚本即可（Homebrew 用 <code>brew upgrade copilot-cli</code>）。想抢先体验新功能，可以安装<strong>预览版（prerelease）</strong>：Homebrew 用 <code>brew install copilot-cli@prerelease</code>，npm 用 <code>npm install -g @github/copilot@prerelease</code>。</span></div>`,
         en: `<h3>Recommended: Install with the install script</h3>
 <div class="command-block"><code>curl -fsSL https://gh.io/copilot-install | bash</code><button class="btn-copy" data-cmd="curl -fsSL https://gh.io/copilot-install | bash"></button></div>
 <div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">This downloads and runs the install script from GitHub. If you prefer wget:<br><code>wget -qO- https://gh.io/copilot-install | bash</code></span></div>
 
-<h3>Alternative: Install with npm</h3>
+<h3>Option 2: Install with Homebrew</h3>
+<p>Copilot CLI now also supports <strong>Homebrew</strong> on Linux. If you already have Homebrew:</p>
+<div class="command-block"><code>brew install copilot-cli</code><button class="btn-copy" data-cmd="brew install copilot-cli"></button></div>
+
+<h3>Option 3: Install with npm</h3>
 <p>Requires <strong>Node.js 22+</strong>:</p>
-<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>`,
+<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>
+
+<div class="info-box info"><span class="info-box-icon">🔄</span><span class="info-box-text"><strong>Updating &amp; prerelease:</strong> To upgrade later, run the install script again (or <code>brew upgrade copilot-cli</code>). To try new features early, install the <strong>prerelease</strong>: Homebrew <code>brew install copilot-cli@prerelease</code>, or npm <code>npm install -g @github/copilot@prerelease</code>.</span></div>`,
         ja: `<h3>おすすめ：インストールスクリプトを使用</h3>
 <div class="command-block"><code>curl -fsSL https://gh.io/copilot-install | bash</code><button class="btn-copy" data-cmd="curl -fsSL https://gh.io/copilot-install | bash"></button></div>
 <div class="info-box info"><span class="info-box-icon">💡</span><span class="info-box-text">このコマンドは GitHub からインストールスクリプトをダウンロードして実行します。wget をお好みの場合：<br><code>wget -qO- https://gh.io/copilot-install | bash</code></span></div>
 
-<h3>代替方法：npm でインストール</h3>
+<h3>方法 2：Homebrew でインストール</h3>
+<p>Copilot CLI は Linux でも <strong>Homebrew</strong> でインストールできるようになりました。Homebrew が既にある場合：</p>
+<div class="command-block"><code>brew install copilot-cli</code><button class="btn-copy" data-cmd="brew install copilot-cli"></button></div>
+
+<h3>方法 3：npm でインストール</h3>
 <p><strong>Node.js 22+</strong> が必要です：</p>
-<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>`,
+<div class="command-block"><code>npm install -g @github/copilot</code><button class="btn-copy" data-cmd="npm install -g @github/copilot"></button></div>
+
+<div class="info-box info"><span class="info-box-icon">🔄</span><span class="info-box-text"><strong>更新とプレビュー版：</strong>後で更新するには、インストールスクリプトを再実行してください（Homebrew は <code>brew upgrade copilot-cli</code>）。新機能をいち早く試すには、<strong>プレビュー版（prerelease）</strong>をインストールできます：Homebrew は <code>brew install copilot-cli@prerelease</code>、npm は <code>npm install -g @github/copilot@prerelease</code>。</span></div>`,
       },
     },
     verification: {
@@ -618,6 +648,19 @@ IT 管理者に連絡して、次のように伝えてください：<br>
     },
     substeps: [
       {
+        title: { zh: '确认信任当前文件夹', en: 'Trust This Folder', ja: 'このフォルダを信頼する' },
+        body: {
+          zh: '<p>启动后，Copilot CLI 会先询问你是否<strong>信任当前文件夹</strong>里的文件。因为 Copilot 可能会读取、修改甚至运行这个目录下的文件，所以需要你确认。通常有三个选项：</p><ul><li><strong>1. Yes, proceed</strong>：仅本次会话信任这个文件夹</li><li><strong>2. Yes, and remember this folder</strong>：以后从这个文件夹启动都不再询问</li><li><strong>3. No, exit</strong>：退出</li></ul><p>对于你自己创建的练习目录，选 <strong>1</strong> 或 <strong>2</strong> 都可以。</p>',
+          en: '<p>On launch, Copilot CLI first asks whether you <strong>trust the files in the current folder</strong>. Because Copilot may read, modify, or even run files in this directory, it needs your confirmation. You\'ll usually see three options:</p><ul><li><strong>1. Yes, proceed</strong>: trust this folder for this session only</li><li><strong>2. Yes, and remember this folder</strong>: never ask again when you start from this folder</li><li><strong>3. No, exit</strong>: quit</li></ul><p>For a practice folder you created yourself, either <strong>1</strong> or <strong>2</strong> is fine.</p>',
+          ja: '<p>起動すると、Copilot CLI はまず<strong>現在のフォルダ内のファイルを信頼するか</strong>を尋ねます。Copilot はこのディレクトリ内のファイルを読み取り・変更・実行する可能性があるため、確認が必要です。通常、次の 3 つの選択肢が表示されます：</p><ul><li><strong>1. Yes, proceed</strong>：このセッションのみフォルダを信頼する</li><li><strong>2. Yes, and remember this folder</strong>：このフォルダから起動するときは今後確認しない</li><li><strong>3. No, exit</strong>：終了する</li></ul><p>自分で作成した練習用フォルダなら、<strong>1</strong> でも <strong>2</strong> でも構いません。</p>',
+        },
+        why: {
+          zh: '这是一项安全设计。Copilot 是有"行动能力"的 AI——它能执行命令、改动文件。先确认信任目录，可以防止它在你不期望的位置擅自操作。',
+          en: 'This is a safety feature. Copilot is an agentic AI — it can run commands and change files. Confirming that you trust the directory prevents it from acting in places you didn\'t intend.',
+          ja: 'これは安全のための仕組みです。Copilot は「行動できる」AI で、コマンドの実行やファイルの変更が可能です。信頼するディレクトリを確認することで、意図しない場所で勝手に操作するのを防ぎます。',
+        },
+      },
+      {
         title: { zh: '使用条款和隐私协议', en: 'Terms of Use & Privacy Agreement', ja: '利用規約とプライバシーに関する同意' },
         body: {
           zh: '<p>系统可能会显示使用条款，询问你是否同意。输入 <code>y</code> 或选择"同意"即可。</p>',
@@ -705,15 +748,18 @@ IT 管理者に連絡して、次のように伝えてください：<br>
           zh: `<p>试着输入一条简单的指令，例如：</p>
 <div class="command-block"><code>list files in current directory</code><button class="btn-copy" data-cmd="list files in current directory"></button></div>
 <p>Copilot 会理解你的意图，为你生成相应的终端命令并执行。</p>
-<div class="info-box success"><span class="info-box-icon">🎉</span><span class="info-box-text">如果你看到了文件列表的输出——恭喜，你已经成功使用了 Copilot CLI！</span></div>`,
+<div class="info-box success"><span class="info-box-icon">🎉</span><span class="info-box-text">如果你看到了文件列表的输出——恭喜，你已经成功使用了 Copilot CLI！</span></div>
+<div class="info-box info"><span class="info-box-icon">⌨️</span><span class="info-box-text"><strong>几个好用的小技巧：</strong><br>• 按 <code>Shift+Tab</code> 切换<strong>计划模式（Plan mode）</strong>，让 Copilot 先和你商量方案再动手<br>• 用 <code>@文件名</code> 把某个文件作为上下文，例如 <code>解释一下 @game.html</code><br>• 在输入前加 <code>!</code> 可以直接运行普通终端命令，例如 <code>!ls</code></span></div>`,
           en: `<p>Try typing a simple instruction, for example:</p>
 <div class="command-block"><code>list files in current directory</code><button class="btn-copy" data-cmd="list files in current directory"></button></div>
 <p>Copilot will understand your intent and generate the appropriate terminal command.</p>
-<div class="info-box success"><span class="info-box-icon">🎉</span><span class="info-box-text">If you see a file listing — congratulations, you've successfully used Copilot CLI!</span></div>`,
+<div class="info-box success"><span class="info-box-icon">🎉</span><span class="info-box-text">If you see a file listing — congratulations, you've successfully used Copilot CLI!</span></div>
+<div class="info-box info"><span class="info-box-icon">⌨️</span><span class="info-box-text"><strong>A few handy tricks:</strong><br>• Press <code>Shift+Tab</code> to toggle <strong>Plan mode</strong>, so Copilot drafts a plan with you before making changes<br>• Use <code>@filename</code> to add a file as context, e.g. <code>Explain @game.html</code><br>• Prefix your input with <code>!</code> to run a normal terminal command directly, e.g. <code>!ls</code></span></div>`,
           ja: `<p>簡単な指示を入力してみてください。例えば：</p>
 <div class="command-block"><code>list files in current directory</code><button class="btn-copy" data-cmd="list files in current directory"></button></div>
 <p>Copilot があなたの意図を理解し、適切なターミナルコマンドを生成してくれます。</p>
-<div class="info-box success"><span class="info-box-icon">🎉</span><span class="info-box-text">ファイル一覧が表示されましたか？おめでとうございます、Copilot CLI を正常に使用できました！</span></div>`,
+<div class="info-box success"><span class="info-box-icon">🎉</span><span class="info-box-text">ファイル一覧が表示されましたか？おめでとうございます、Copilot CLI を正常に使用できました！</span></div>
+<div class="info-box info"><span class="info-box-icon">⌨️</span><span class="info-box-text"><strong>便利なコツ：</strong><br>• <code>Shift+Tab</code> で<strong>プランモード（Plan mode）</strong>を切り替え、変更前に Copilot と方針を相談できます<br>• <code>@ファイル名</code> でファイルをコンテキストに追加できます（例：<code>@game.html を説明して</code>）<br>• 入力の先頭に <code>!</code> を付けると通常のターミナルコマンドを直接実行できます（例：<code>!ls</code>）</span></div>`,
         },
         why: {
           zh: '这验证了整个链路都在正常工作：CLI 工具 → GitHub 认证 → AI 模型 → 结果返回。',
@@ -1002,6 +1048,9 @@ const CONGRATS_CONTENT = {
 <ul>
   <li>💬 你可以用<strong>中文或英文</strong>和 Copilot 对话</li>
   <li>📁 在项目目录下启动 Copilot，它能理解你的项目上下文</li>
+  <li>📋 按 <code>Shift+Tab</code> 进入<strong>计划模式（Plan mode）</strong>，让 Copilot 先列方案再动手</li>
+  <li>📎 用 <code>@文件名</code> 把某个文件加入上下文</li>
+  <li>↩️ 用 <code>/resume</code> 恢复以前的会话，或运行 <code>copilot --continue</code> 直接回到上次的对话</li>
   <li>🔄 用 <code>/clear</code> 清空对话历史</li>
   <li>❓ 用 <code>/help</code> 查看所有可用命令</li>
 </ul>
@@ -1031,6 +1080,9 @@ const CONGRATS_CONTENT = {
 <ul>
   <li>💬 You can talk to Copilot in <strong>any language</strong></li>
   <li>📁 Launch Copilot inside a project directory — it understands your project context</li>
+  <li>📋 Press <code>Shift+Tab</code> for <strong>Plan mode</strong> — Copilot drafts a plan before changing anything</li>
+  <li>📎 Use <code>@filename</code> to add a file to the context</li>
+  <li>↩️ Use <code>/resume</code> to restore a past session, or run <code>copilot --continue</code> to jump back into your last conversation</li>
   <li>🔄 Use <code>/clear</code> to clear conversation history</li>
   <li>❓ Use <code>/help</code> to see all available commands</li>
 </ul>
@@ -1060,6 +1112,9 @@ const CONGRATS_CONTENT = {
 <ul>
   <li>💬 Copilot には<strong>どの言語でも</strong>話しかけられます</li>
   <li>📁 プロジェクトディレクトリ内で Copilot を起動すると、プロジェクトの文脈を理解してくれます</li>
+  <li>📋 <code>Shift+Tab</code> で<strong>プランモード（Plan mode）</strong>に入り、変更前に方針を立てられます</li>
+  <li>📎 <code>@ファイル名</code> でファイルをコンテキストに追加できます</li>
+  <li>↩️ <code>/resume</code> で過去のセッションを復元、または <code>copilot --continue</code> で直前の会話に戻れます</li>
   <li>🔄 <code>/clear</code> で会話履歴をクリアできます</li>
   <li>❓ <code>/help</code> で利用可能なコマンド一覧を確認できます</li>
 </ul>
